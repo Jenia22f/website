@@ -84,13 +84,137 @@
         </div>
       </div>
       </div>
+
       <div class="main-logins">
         <div class="main-logins_logo"></div>
-        <div class="main-logins_reg-users">
-          <img src="~@/assets/imgs/ellipse1.png" alt="">
-          <div class="main-logins_reg-users_data">
-            <p>Alex</p>
-            <span>зарегистрировался</span>
+        <div id="myCarousels" class="carousel slide" data-ride="carousel" data-interval="5500">
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(1).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Александра</p>
+                  <span>зарегистрировалась</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(2).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Иван</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(3).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Геннадий</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(4).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Олег</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(5).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Григорий</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(6).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Борис</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(7).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Людмила</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(8).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Виталий</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(9).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Станислав</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(10).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Александр</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(11).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Федор</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image(12).jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Иван</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image897.jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Константин</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
+            <div class="item ">
+              <div class="main-logins_reg-users">
+                <img src="~@/assets/imgs/registericons/image.jpg" alt="">
+                <div class="main-logins_reg-users_data">
+                  <p>Сергей</p>
+                  <span>зарегистрировался</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

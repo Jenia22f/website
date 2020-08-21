@@ -40,7 +40,9 @@
                 <input type="text" placeholder="Ваше email">
                 <input type="text" placeholder="+380 (96) 8798 685">
               </form>
+              <nuxt-link exact to="/registered">
               <button class="form-registration_form-btn" type="submit">НАЖМИ МЕНЯ</button>
+              </nuxt-link>
               <p class="form-registration_form-policy">Я ознакомлен с <span>политикой сайта</span></p>
             </div>
             <div class="visa-container" id="visa-container">

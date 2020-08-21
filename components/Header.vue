@@ -131,7 +131,7 @@
         immediate: true
       }
 
-    }
+    },
   }
 
 </script>

@@ -11,7 +11,7 @@
     </div>
     <div class="reviews-list">
       <div class="container">
-        <ul class="nav ">
+        <ul class="nav" id="nav">
           <li class="active"><a data-toggle="tab" href="#menu0" class="d-flex">
             <img src="~@/assets/imgs/rectangle74.png" alt="">
             <div class="user-data">

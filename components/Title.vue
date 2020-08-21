@@ -105,6 +105,21 @@
             <div class="item">
               <div class="title-container_registered-user">
                 <div class="title-container_registered-user_logo">
+                  <img src="~@/assets/imgs/registericons/image(6).jpg" alt="">
+                </div>
+                <div class="title-container_registered-user_name">
+                  <p>
+                    Борис
+                  </p>
+                  <span>
+              зарегистрировался
+            </span>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="title-container_registered-user">
+                <div class="title-container_registered-user_logo">
                   <img src="~@/assets/imgs/registericons/image(7).jpg" alt="">
                 </div>
                 <div class="title-container_registered-user_name">
@@ -338,6 +353,10 @@
     .active {
       display: none;
     }
+  }
+
+  #myCarousel3 {
+    overflow: hidden;
   }
 </style>
 
