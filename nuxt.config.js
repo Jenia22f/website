@@ -1,6 +1,6 @@
 export default {
-  server: {
-    port: 8000, // default: 3000
+  scripts: {
+    "dev": "NUXT_HOST=0.0.0.0 NUXT_PORT=3333 nuxt"
   },
   /*
   ** Nuxt rendering mode
@@ -84,5 +84,6 @@ export default {
     /*
     ** Run ESLint on save
     */
-  }
+  },
+
 }
