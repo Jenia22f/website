@@ -1,4 +1,5 @@
 export default {
+  dev: process.env.NODE_ENV !== 'production',
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
