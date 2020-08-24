@@ -1,7 +1,4 @@
 export default {
-  scripts: {
-    "dev": "NUXT_HOST=0.0.0.0 NUXT_PORT=3333 nuxt"
-  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
