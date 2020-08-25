@@ -95,13 +95,13 @@
     color: #000000;
     font-weight: normal;
     font-size: 14px;
-    padding: 20px 18px 18px 23px;
+    padding: 20px 7px 18px 23px;
     letter-spacing: 0.13em;
   }
 
   .neededToKnow_with-girl_whatToKnow-consult-btn i {
     font-size: 20px!important;
-    margin: 23px 14px 0 0;
+    margin: 22px 14px 0 0;
   }
 
   .neededToKnow_opportunities {
