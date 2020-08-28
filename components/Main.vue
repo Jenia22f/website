@@ -229,11 +229,11 @@
           {{count}}
         </div>
       </div>
-        <form @submit.prevent="onSubmit" class="main-registration_form d-flex flex-column">
+        <form class="main-registration_form d-flex flex-column">
           <input type="text" placeholder="Ваше Имя">
           <input type="text" placeholder="Ваше email">
           <input type="text" placeholder="+380 (96) 8798 685">
-          <button class="btn" type="submit">Консультация</button>
+          <a href="/registered" class="btn" >Консультация</a>
           <p class="policy">Я ознакомлен с <span>политикой сайта</span></p>
         </form>
 
@@ -458,7 +458,7 @@
     border: none;
   }
 
-  .main-registration_form button {
+  .main-registration_form a {
     margin-top: 41px;
     width: 280px;
     height: 59px;
@@ -468,6 +468,7 @@
     color: #303030;
     font-weight: 600;
     font-size: 14px;
+    padding: 19px 18px 0 18px;
   }
 
   .main-registration_form .policy {
