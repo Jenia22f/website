@@ -281,6 +281,7 @@
         </div>
         <div class="footer">
           <div class="footer-logo">
+            <img src="/_nuxt/assets/imgs/logo.svg" alt="logo">
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -630,12 +631,17 @@
   .footer-logo {
     width: 58px;
     height: 56px;
-    background: #C4C4C4;
+    /*background: #C4C4C4;*/
     border-radius: 100px;
     margin: 0 auto;
     position: relative;
     bottom: 30px;
   }
+
+  /*.footer-logo img {*/
+  /*  width: 58px;*/
+  /*  height: 56px;*/
+  /*}*/
 
   .footer p {
     font-family: 'Open Sans', sans-serif;

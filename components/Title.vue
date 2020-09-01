@@ -2,7 +2,7 @@
   <div class="title">
     <div class="title-container ">
       <div class="title-container_logo">
-        <div></div>
+        <img src="~@/assets/imgs/logo.svg" alt="logo">
       </div>
       <div class="title-container_title">
         УНИКАЛЬНЫЙ ЭКСКЛЮЗИВНЫЙ КУРС <br>
@@ -264,10 +264,9 @@
     width: 250px;
   }
 
-  .title-container_logo div {
+  .title-container_logo img {
     width: 60px;
     height: 60px;
-    background-color: #C4C4C4;
   }
 
   .title-container_title {

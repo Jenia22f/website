@@ -39,6 +39,7 @@
           <div id="menu0" class="tab-pane fade in active">
             <div class="d-flex">
             <div class="tab-content_video">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6MfdjuzcPJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
               <div class="review-content">
                 <div class="review-content_time"><p>отзыв оставлен 2 дня назад</p> <div class="videobtn"><i class="fas fa-play"></i> видео отзыв</div></div>
@@ -58,6 +59,7 @@
           <div id="menu1" class="tab-pane fade">
             <div class="d-flex">
               <div class="tab-content_video">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lo0ELoepTCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="review-content">
                 <div class="review-content_time"><p>отзыв оставлен 3 дня назад</p> <div class="videobtn"><i class="fas fa-play"></i> видео отзыв</div></div>
@@ -76,6 +78,7 @@
           <div id="menu2" class="tab-pane fade">
             <div class="d-flex">
               <div class="tab-content_video">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lo0ELoepTCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="review-content">
                 <div class="review-content_time"><p>отзыв оставлен 4 дня назад</p> <div class="videobtn"><i class="fas fa-play"></i> видео отзыв</div></div>
@@ -378,7 +381,7 @@
     }
 
     .videobtn {
-      display: block;
+      /*display: block;*/
       width: 165px;
       height: 43px;
       background: rgba(233, 233, 233, 0.43);

@@ -220,7 +220,12 @@
       </div>
     <div class="main-longway">
       <h3>МЫ ШЛИ К ЭТОМУ ДОЛГОЕ ВРЕМЯ ЧТОБЫ СЕЙЧАС ВЫ ПОЛУЧИЛИ ВСЕ!</h3>
-      <div class="main-longway_video"></div>
+      <div class="main-longway_video">
+        <video width="100%" height="100%" controls autoplay>
+          <source src="~@/assets/video/Meditation.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
     <div class="main-registration">
       <div class="main-registration_count d-flex">
@@ -246,13 +251,12 @@
         <div class="modal-content" style="z-index: 1040;">
 
           <!-- Modal Header -->
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
+<!--          <div class="modal-header">-->
+<!--            <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+<!--          </div>-->
           <!-- Modal body -->
           <div class="modal-body">
-
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6MfdjuzcPJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -262,12 +266,12 @@
         <div class="modal-content" style="z-index: 1040;">
 
           <!-- Modal Header -->
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
+<!--          <div class="modal-header">-->
+<!--            <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+<!--          </div>-->
           <!-- Modal body -->
           <div class="modal-body">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TOwJWspR3Rs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           </div>
         </div>
@@ -598,6 +602,7 @@
 
   .modal-body {
     height: 500px;
+    padding: 0;
   }
 
   .modal-content {
