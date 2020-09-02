@@ -2,8 +2,8 @@
   <div class="reviews d-flex">
     <div class="reviews-consultation">
       <div class="float-right">
-      <p class="reviews-consultation-title">У НАС УЖЕ БОЛЕЕ 50 000 ТИСЯЧ УСПЕШНЫХ КЛИЕНТОВ</p>
-      <h3>ТУТ МОГ БЫТЬ ВАШ ОТЗЫВ</h3>
+      <p class="reviews-consultation-title">УЖЕ БОЛЕЕ 50 000 ТИСЯЧ ЛЮДЕЙ СТАЛИ НАШИМИ УСПЕШНЫМИ КЛИЕНТАМИ</p>
+      <h3>ОТЗЫВЫ ПРО ПЕРВЫЙ ШАГ</h3>
       <div @click='scrollToTop()' class="reviews-consultation_btn d-flex">
         <p>КОНСУЛЬТАЦИЯ</p> <i class="fas fa-long-arrow-alt-right"></i>
       </div>
@@ -119,11 +119,13 @@
     font-weight: normal;
     font-size: 16px;
     color: #D8D8D8;
-    width: 252px;
-    margin: 117px 89px 94px 0;
+    width: 320px;
+    margin: 117px 21px 94px 0;
+    font-family: Roboto;
   }
 
   .reviews-consultation h3 {
+    font-family: Roboto;
     font-weight: 900;
     font-size: 40px;
     color: #E1E1E1;
@@ -142,6 +144,7 @@
   }
 
   .reviews-consultation_btn p {
+    font-family: Roboto;
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.13em;
@@ -180,6 +183,7 @@
   }
 
   .user-data p {
+    font-family: Roboto;
     font-weight: 500;
     font-size: 17px;
     color: #333333;
@@ -188,6 +192,7 @@
   }
 
   .user-data span {
+    font-family: Roboto;
     font-weight: normal;
     font-size: 13px;
     color: #808080;
@@ -235,13 +240,14 @@
   }
 
   .review-content_text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Open Sans;
     font-style: italic;
     font-weight: normal;
     font-size: 17px;
     color: #343434;
     width: 317px;
     margin-top: 38px;
+    line-height: 30px;
   }
 
   .review-content {
@@ -254,6 +260,15 @@
     color: #7B7A7A;
     margin-top: 15px;
     margin-bottom: 8px;
+  }
+
+  .review-content_time p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    color: #7B7A7A;
   }
 
   @media only screen and (max-width: 1270px) {

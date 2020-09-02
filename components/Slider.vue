@@ -286,11 +286,13 @@
   }
 
   .item_content-small-info p {
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     color: #EEEEEE;
     margin: 20px 0 5px 12px;
+    line-height: 21px;
   }
 
   .item_content-small-info span {
@@ -298,15 +300,19 @@
     font-size: 14px;
     color: #C8C8C8;
     margin: 0 24px 20px 10px;
+    font-family: Roboto;
+    line-height: 16px;
   }
 
   .item_content-info_title {
+    font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     color: #DEDEDE;
     max-width: 288px;
     margin: 45px 169px 30px 33px;
+    line-height: 39px;
   }
 
   .item_content-info_text {
@@ -314,7 +320,7 @@
     font-weight: normal;
     font-size: 15px;
     color: #C5C5C5;
-    max-width: 412px;
+    max-width: 411px;
     margin-left: 35px;
     line-height: 28px;
   }
@@ -429,11 +435,13 @@
 
   @media only screen and (max-width: 450px) {
     .item-img {
-      height: 500px;
-      min-height: 500px;
+      height: 300px;
+      min-height: 300px;
       }
-    .item_content-small-info {
-      max-width: 300px;
+
+    .item_content-small-info  {
+      height: 61px;
+      width: 340px;
     }
     .item_content-small-info span {
       font-size: 12px;
@@ -441,12 +449,13 @@
     }
 
     .item_content-small-info img {
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
     }
 
     .item_content-small-info p {
       margin: 10px 0 5px 6px;
+      font-size: 16px;
     }
 
     .slider_why-slider {

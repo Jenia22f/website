@@ -281,12 +281,10 @@
         </div>
         <div class="footer">
           <div class="footer-logo">
-            <img src="/_nuxt/assets/imgs/logo.svg" alt="logo">
+            <img src="~@/assets/imgs/logo.svg" alt="logo">
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat
+            We have placed cookies on your computer to help improve your experience when visiting this website. You can change cookie settings on your computer at any tim
           </p>
           <p>Privacy Policy | Agreement</p>
         </div>
@@ -312,6 +310,7 @@
     background-repeat: no-repeat;
     /*background-image: url(""), no-repeat, center;*/
     border-radius: 56px;
+    padding-bottom: 50px;
   }
 
   .form-registration {
@@ -334,6 +333,8 @@
   }
 
   .form-registration_steps-title {
+    font-family: "Open Sans";
+    line-height: 26px;
     font-weight: normal;
     font-size: 17px;
     color: #D8D8D8;
@@ -342,7 +343,9 @@
   }
 
   .form-registration_steps-comment {
-    font-weight: 600;
+    font-family: Open Sans;
+    line-height: 19px;
+    font-weight: 400;
     font-size: 14px;
     color: #A9A9A9;
   }
@@ -384,11 +387,12 @@
   }
 
   .form-registration_steps-boxes_fr p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Open Sans;
     font-weight: normal;
     font-size: 15px;
     color: #9E9E9E;
     width: 170px;
+    line-height: 21px;
   }
 
   .form-registration_form {
@@ -405,6 +409,7 @@
   }
 
   .form-registration_form-number-today_num {
+    line-height: 50px;
     width: 54px;
     height: 71px;
     background: #B84A4A;
@@ -412,8 +417,8 @@
     font-weight: 900;
     font-size: 40px;
     color: #EAEAEA;
-    font-family: 'Roboto', sans-serif;
-    padding-top: 5px
+    font-family: Roboto;
+    padding-top: 10px
   }
 
   .form-registration_form-number-today_num:not(:last-child) {
@@ -421,13 +426,14 @@
   }
 
   .form-registration_form-number-today_p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Open Sans;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     color: #DFDFDF;
     margin-top: 14px;
     margin-bottom: 34px;
+    line-height: 18px;
   }
 
   .form-registration_form-fields input {
@@ -435,7 +441,7 @@
     height: 59px;
     background: rgba(160, 157, 163, 0.25);
     border-radius: 100px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Open Sans;
     font-weight: 600;
     font-size: 14px;
     color: #8D8D8D;
@@ -652,6 +658,7 @@
     max-width: 754px;
     position: relative;
     bottom: 15px;
+    max-width: 620px;
   }
 
   @media only screen and (max-width: 1540px) {

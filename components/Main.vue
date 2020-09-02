@@ -25,7 +25,7 @@
 <!--      <div class="main-reviews_video-btn">-->
 <!--        <i class="fas fa-play"></i> видео отзыв-->
 <!--      </div>-->
-<!--      <p class="main-reviews_all">All reviews</p>-->
+<!--      <p class="main-reviews_all">Все Отзывы</p>-->
 <!--    </div>-->
       <div class="main-reviews">
       <div id="myCarousel2" class="carousel slide" data-ride="carousel">
@@ -53,7 +53,7 @@
               <div class="main-reviews_video-btn" data-toggle="modal" data-target="#myModal">
                 <i class="fas fa-play"></i> видео отзыв
               </div>
-              <p class="main-reviews_all">All reviews</p>
+              <p class="main-reviews_all">Все Отзывы</p>
             </div>
           <div class="item">
               <div class="main-reviews_user-data d-flex">
@@ -78,7 +78,7 @@
               <div class="main-reviews_video-btn" data-toggle="modal" data-target="#myModal2">
                 <i class="fas fa-play"></i> видео отзыв
               </div>
-              <p class="main-reviews_all">All reviews</p>
+              <p class="main-reviews_all">Все Отзывы</p>
           </div>
 
         </div>
@@ -219,7 +219,7 @@
         </div>
       </div>
     <div class="main-longway">
-      <h3>МЫ ШЛИ К ЭТОМУ ДОЛГОЕ ВРЕМЯ ЧТОБЫ СЕЙЧАС ВЫ ПОЛУЧИЛИ ВСЕ!</h3>
+      <h3>МЫ ШЛИ К ЭТОМУ ДОЛГОЕ ВРЕМЯ ЧТОБЫ СЕЙЧАС ВЫ СДЕЛАЛИ ТОЛЬКО ОДИН ШАГ!</h3>
       <div class="main-longway_video">
         <video width="100%" height="100%" controls autoplay>
           <source src="~@/assets/video/Meditation.mp4" type="video/mp4">
@@ -289,8 +289,6 @@
 
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
   .main {
     background: url('~@/assets/imgs/Rectangle21.png');
@@ -332,6 +330,7 @@
     margin-bottom: 2px;
     font-style: normal;
     font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
   }
 
   .main-reviews_user-data_name span {
@@ -348,6 +347,10 @@
     font-size: 14px;
     width: 269px;
     margin-top: 32px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
   }
 
   .main-reviews_video-btn {
@@ -355,7 +358,7 @@
     height: 44px;
     background: #C4C4C4;
     border-radius: 100px;
-    text-align: center;
+    text-align: left;
     padding-top: 14px;
     margin-top: 39px;
     font-family: 'Open Sans', sans-serif;
@@ -366,11 +369,20 @@
     cursor: pointer;
   }
 
+  .main-reviews_video-btn i {
+    padding-left: 11px;
+    padding-right: 14px;
+    padding-top: 1px;
+    font-size: 14px;
+  }
+
   .main-reviews_all {
     font-size: 14px;
     color: #B6B6B6;
-    /*padding-bottom: 60px;*/
     margin-top: 43px;
+    font-family: 'Open sans';
+    border-bottom: 1px solid;
+    width: fit-content;
   }
 
   .main-logins {
@@ -393,8 +405,10 @@
     font-size: 25px;
     text-align: center;
     color: #FFFFFF;
-    max-width: 510px;
+    max-width: 550px;
     margin: 29px auto 38px;
+    line-height: 33px;
+    padding: 0 15px;
   }
 
   .main-longway_video {
@@ -418,19 +432,19 @@
   }
 
   .main-registration p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-weight: bold;
     font-size: 25px;
     color: #E2E2E2;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.48);
     margin-left: 55px;
     margin-top: 36px;
-    line-height: 1.2;
+    line-height: 29px;
   }
 
   .main-registration .count {
-    width: 126px;
-    height: 52px;
+    min-width: 126px;
+    min-height: 52px;
     background: #E75C5C;
     border-radius: 7px;
     margin-top: 36px;
@@ -441,8 +455,9 @@
     font-size: 27px;
     color: #EEEEEE;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 10px;
     margin-bottom: 28px;
+    line-height: 32px;
   }
 
   .main-registration_form {
@@ -460,6 +475,7 @@
     margin-top: 14px;
     padding-left: 36px;
     border: none;
+    font-size: 14px;
   }
 
   .main-registration_form a {
@@ -470,9 +486,13 @@
     border-radius: 52px;
     margin-left: 55px;
     color: #303030;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     padding: 19px 18px 0 18px;
+    text-transform: uppercase;
+    font-family: Open Sans;
+    font-style: normal;
+    line-height: 19px;
   }
 
   .main-registration_form .policy {
@@ -481,6 +501,8 @@
     font-size: 12px;
     margin-left: 95px;
     margin-top: 20px;
+    font-family: 'Open Sans';
+    line-height: 16px;
   }
 
   .main-registration_form .policy span {
@@ -536,11 +558,16 @@
       margin-top: 23px;
     }
 
+    .carousel-inner {
+      margin-right: 15px;
+    }
+
     .main-logins_logo {
       width: 60px;
       height: 60px;
       background: #C4C4C4;
       border-radius: 46px;
+      margin-left: 15px;
     }
 
     .main-logins_reg-users {

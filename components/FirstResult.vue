@@ -25,7 +25,7 @@
     </div>
     <div class="first-result_week-result">
       <h3>ПЕРВЫЙ <span>РЕЗУЛЬТАТ</span> УЖЕ ЧЕРЕЗ НЕДЕЛЮ</h3>
-      <p class="first-result_week-result_txt">ПЕРВЫЕ ШАГИ К ЗАРАБОТКУ</p>
+      <p class="first-result_week-result_txt">ПЕРВЫЕ ШАГИ К СОТРУДНИЧЕСТВУ</p>
       <div class="first-result_week-result_steps">
       <div class="first-result_week-result_steps-onestep">
         <h2>01</h2>
@@ -71,7 +71,7 @@
                         <div class="range qis-slider-term">
                           <div class="qis-slideroutput qis-loan">
                             <span class="qis-sliderleft qis-min">1 Месяц</span>
-                            <span class="qis-slidercenter"><output></output></span>
+                            <span class="qis-slidercenter"><output>{{month}} месяц</output></span>
                             <span class="qis-sliderright qis-max">12 Месяц</span>
                           </div>
                           <input type="range" name="loan-period" min="1" max="12" value="6"
@@ -80,7 +80,7 @@
                         <div class="range qis-slider-principal">
                           <div class="qis-slideroutput qis-loan">
                             <span class="qis-sliderleft qis-min">$250 </span>
-                            <span class="qis-slidercenter"><output></output></span>
+                            <span class="qis-slidercenter"><output>{{moneyArr[money]}}$</output></span>
                             <span class="qis-sliderright qis-max">$10000 </span>
                           </div>
                           <input type="range" name="loan-money" min="0" max="11" value="5"
@@ -147,12 +147,14 @@
     font-size: 50px;
     color: #000000;
     width: 184px;
+    font-family: Roboto;
   }
 
   .first-result_numbers-data p {
     font-weight: normal;
     font-size: 16px;color: #494949;
     max-width: 185px;
+    font-family: Roboto;
   }
 
   .underline-num {
@@ -176,6 +178,7 @@
   }
 
   .first-result_week-result h3 {
+    font-family: Roboto;
     font-weight: 900;
     font-size: 40px;
     color: #333333;
@@ -191,6 +194,8 @@
     font-size: 20px;
     color: #505050;
     margin-top: 42px;
+    font-family: Roboto;
+    margin-bottom: 50px;
   }
 
   .first-result_week-result_steps {
@@ -200,6 +205,9 @@
 
   .first-result_week-result_steps-onestep {
     display: flex;
+  }
+
+  .first-result_week-result_steps-onestep:first-child {
     padding-top: 42px;
   }
 
@@ -208,6 +216,7 @@
   }
 
   .first-result_week-result_steps-onestep h2 {
+    font-family: Roboto;
     font-weight: 900;
     font-size: 60px;
     color: #090120;
@@ -233,6 +242,7 @@
     color: #303030;
     padding-top: 20px;
     width: 165px;
+    font-family: Roboto;
   }
 
   .first-result_week-result_steps-onestep_info p {
@@ -240,6 +250,19 @@
     font-size: 15px;
     color: #5A5A5A;
     margin-top: 38px;
+    font-family: Roboto;
+  }
+
+  output {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #D1D1D1;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.53);
+    padding-bottom: 5px;
+    position: relative;
+    bottom: 25px;
   }
 
   #calc-1::after {
@@ -314,6 +337,7 @@
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.47) !important;
     text-align: center;
     padding-top: 7px;
+    margin-right: 16px;
   }
 
   .val-total {
@@ -322,8 +346,13 @@
   }
 
   .val-total p {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
     margin: 0;
     padding-top: 20px;
+    color: #C9C9C9;
+    font-family: Roboto;
   }
 
   .individual {
@@ -431,7 +460,7 @@
 
   .el-region-calc_consultation-btn p {
     padding: 20px 0 18px 23px;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto;
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.13em;
@@ -601,6 +630,7 @@
     .first-result_week-result_txt {
       position: relative;
       top: 1020px;
+
     }
 
     .first-result_week-result p {
@@ -734,7 +764,7 @@
     data() {
       return {
         month: 6,
-        money: 6,
+        money: 5,
         moneyArr: [250,500,750,1000 ,1500 ,2000 ,2500, 3000, 3500, 4000, 4500 ,5000],
         result: 12000
       }

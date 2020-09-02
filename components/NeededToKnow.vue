@@ -73,7 +73,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 50px;
-    line-height: 59px;
+    line-height: 69px;
     color: #DEDEDE;
     text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.54);
     width: 223px;
@@ -101,12 +101,12 @@
 
   .neededToKnow_with-girl_whatToKnow-consult-btn i {
     font-size: 20px!important;
-    margin: 22px 14px 0 0;
+    margin: 20px 14px 0 0;
   }
 
   .neededToKnow_opportunities {
     display: grid;
-    grid-template-columns: 230px 308px;
+    grid-template-columns: 298px 322px;
     margin-left: 113px;
     margin-top: 50px;
   }
@@ -117,7 +117,7 @@
   }
 
   .neededToKnow_opportunities-for-each:nth-child(even) {
-    margin-left: 78px;
+    margin-left: 42px;
   }
 
   .neededToKnow_opportunities-for-each h3 {
@@ -140,10 +140,11 @@
   }
 
   .neededToKnow_opportunities-for-each p {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: #454545;
+    line-height: 25px;
   }
 
   @media only screen and (max-width: 1260px) {
@@ -302,7 +303,7 @@
   @media only screen and (max-width: 400px) {
 
     .main-registration p {
-      margin-left: 12px;
+      margin-left: 32px;
     }
 
   }

@@ -5,8 +5,9 @@
         <img src="~@/assets/imgs/logo.svg" alt="logo">
       </div>
       <div class="title-container_title">
-        УНИКАЛЬНЫЙ ЭКСКЛЮЗИВНЫЙ КУРС <br>
-        <span>ДЛЯ БОЛЬШИХ ВОЗМОЖНОСТЕЙ</span>
+        СЕГОДНЯ БОЛЕЕ 5,000 КЛИЕНТОВ
+        <br>
+        <span>ПОЛУЧИЛИ ЭКСКЛЮЗИВНЫЙ КУРС</span>
       </div>
       <div class="regUser d-flex" id="regUser">
         <div id="myCarousel3" class="carousel slide" data-ride="carousel" data-interval="5500">
@@ -308,7 +309,7 @@
   }
 
   .title-container_registered-user_logo img {
-    width: 100%;
+    width: 55px;
     border-radius: 50%;
   }
 
@@ -325,13 +326,16 @@
     font-weight: 500;
     margin-bottom: 8px;
     margin-top: 5px;
+    font-family: 'Roboto';
   }
 
   .title-container_registered-user_name span {
     color: #6C6C6C;
     font-size: 15px;
     font-weight: normal;
-  }
+    font-family: 'Open Sans';
+    font-style: normal;
+    }
 
   @media only screen and (max-width: 1199px) {
     .title {
