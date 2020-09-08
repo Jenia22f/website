@@ -8,75 +8,77 @@
     <div class="slider_round-imges ellipse10"></div>
     <div class="slider_round-imges ellipse9"></div>
     <div class="slider_why-slider container">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide carousel-fade"  data-ride="carousel" data-interval="5000" data-pause="hover">
 
           <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
+          <div class="carousel-inner carousel-inner-rev">
+            <div class="item item-slider active">
               <div class="item-container d-flex">
               <div class="item-img item-img_firstslide"></div>
               <div class="item_content">
                 <div class="item_content-small-info d-flex">
                   <img src="~@/assets/imgs/story/slide3/image.jpg" alt="">
                   <div class="item_content-small-info_name">
-                    <p>Алексей Минин</p>
-                    <span>стал финансово независим в свои 35 лет</span>
+                    <p>Александр Линник</p>
+                    <span>Владелец СТО</span>
                   </div>
                 </div>
-                <h3 class="item_content-info_title">ПОЧЕМУ Я ВЫБРАЛ GLOBALMAXIS</h3>
-                <p class="item_content-info_text">Счастлив тот, у кого хороший брокер! И для меня это так,
-                  потому что после стольких неудачных попыток и полного разочарования,
-                  найти такого брокера как GlomalMaxis было просто счастье!
-                  До нашей встречи я перелопатила кучу форумов, чатов,
-                  и другие источники но так и не нашла не одного брокера,
-                  который бы сравнился с GlobalMaxis</p>
-                <p class="item_content-info_time">Время сотрудничества 4 года</p>
+                <h3 class="item_content-info_title">Мечты материальны. Главное действовать!</h3>
+                <p class="item_content-info_text">Я всегда твердил, что в этой жизни возможно всё!
+                  Перед вами всегда открыты все горизонты и вы сами прокладываете себе путь.
+<!--                  Я не обладаю каким-то сверх талантом, я просто стараюсь брать от жизнь все!-->
+                  Началось мое сотрудничество с этой компанией ровно пол года назад.
+                  За это время они сделали для меня весьма не мало, хотя порог входа у меня был минимальный.
+<!--                  Тем не менее, свои основные цели я уже достиг, дальше новая ступень!-->
+                </p>
+                <p class="item_content-info_time">Время сотрудничества <span>пол года</span></p>
               </div>
               </div>
             </div>
+            <div class="item item-slider">
+              <div class="item-container d-flex">
+                <div class="item-img item-img_thirdslide"></div>
+                <div class="item_content">
+                  <div class="item_content-small-info d-flex">
+                    <img src="~@/assets/imgs/story/slide2/image(13).jpg" alt="">
+                    <div class="item_content-small-info_name">
+                      <p>Алина Колесникова </p>
+                      <span>Открыла занятия по Йоге</span>
+                    </div>
+                  </div>
+                  <h3 class="item_content-info_title"> Мой первый капитал для бизнеса</h3>
+                  <p class="item_content-info_text">Я, как и любая  уважающая  себя женщина,
+                    хотела больше уделять  внимания  себе,
+                    забыть что такое усталость и не приходить с работы с испорченным настроением.
+                    Зарплатой я бы не похвасталась, но ее вполне хватило,
+                    для того чтобы начать работать с этой компанией и получать результат.
+                    Спасибо вам, без вас мне было бы очень сложно!</p>
+                  <p class="item_content-info_time">Время сотрудничества <span> год</span></p>
+                </div>
+              </div>
+            </div>
 
-            <div class="item">
+            <div class="item item-slider">
               <div class="item-container d-flex">
               <div class="item-img item-img_secondslide"></div>
               <div class="item_content">
                 <div class="item_content-small-info d-flex">
                   <img src="~@/assets/imgs/story/slide1/icon.jpg" alt="">
                   <div class="item_content-small-info_name">
-                    <p>Олег Макаренко</p>
-                    <span>стал финансово независим в свои 38 лет</span>
+                    <p>Никита Алексеев</p>
+                    <span></span>
                   </div>
                 </div>
-                <h3 class="item_content-info_title">ПОЧЕМУ Я ВЫБРАЛ GLOBALMAXIS</h3>
-                <p class="item_content-info_text">Счастлив тот, у кого хороший брокер! И для меня это так,
-                  потому что после стольких неудачных попыток и полного разочарования,
-                  найти такого брокера как GlomalMaxis было просто счастье!
-                  До нашей встречи я перелопатила кучу форумов, чатов,
-                  и другие источники но так и не нашла не одного брокера,
-                  который бы сравнился с GlobalMaxis</p>
-                <p class="item_content-info_time">Время сотрудничества 2 года</p>
-              </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="item-container d-flex">
-              <div class="item-img item-img_thirdslide"></div>
-              <div class="item_content">
-                <div class="item_content-small-info d-flex">
-                  <img src="~@/assets/imgs/story/slide2/image(13).jpg" alt="">
-                  <div class="item_content-small-info_name">
-                    <p>Ирина Ковалык</p>
-                    <span>стала финансово независимой в свои 29</span>
-                  </div>
-                </div>
-                <h3 class="item_content-info_title">ПОЧЕМУ Я ВЫБРАЛ GLOBALMAXIS</h3>
-                <p class="item_content-info_text">Счастлив тот, у кого хороший брокер! И для меня это так,
-                  потому что после стольких неудачных попыток и полного разочарования,
-                  найти такого брокера как GlomalMaxis было просто счастье!
-                  До нашей встречи я перелопатила кучу форумов, чатов,
-                  и другие источники но так и не нашла не одного брокера,
-                  который бы сравнился с GlobalMaxis</p>
-                <p class="item_content-info_time">Время сотрудничества 3 года</p>
+                <h3 class="item_content-info_title"></h3>
+                <p class="item_content-info_text">Все оказалось намного проще чем оно есть.
+                  Наверное это потому, что мы привыкли усложнять,
+                  а потом жаловаться что все дается с трудом.
+                  Все проблемы в нашей голове. Мы много чего упускаем, а потом оправдываемся.
+                  Мне выпал шанс, и я им воспользовался. И сегодня я могу позволить себе то,
+                  в чем пару лет назад себе отказывал.
+                  Мое почтение этой компании,
+                  так как вы делаете людей по-настоящему счастливее! </p>
+                <p class="item_content-info_time">Время сотрудничества <span>2 года</span></p>
               </div>
               </div>
             </div>
@@ -84,10 +86,10 @@
           </div>
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"> <i class="fas fa-angle-left"></i> </span>
+            <span class="glyphicon glyphicon-chevron-left"> <img src="~@/assets/imgs/keyboard_arrow_left.png" alt=""> </span>
           </a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"> <i class="fas fa-angle-right"></i> </span>
+            <span class="glyphicon glyphicon-chevron-right"> <img src="~@/assets/imgs/keyboard_arrow_left.png" alt="">  </span>
           </a>
         </div>
     </div>
@@ -103,71 +105,85 @@
     justify-content: center;
   }
 
-  .slider_round-imges {
-    filter: blur(4px);
-  }
+  /*.slider_round-imges {*/
+  /*  filter: blur(4px);*/
+  /*}*/
 
   .ellipse4 {
-    background: url("~@/assets/imgs/ellipse4.png");
+    background: url("~@/assets/imgs/ellipse4.png") no-repeat;
     position: absolute;
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
     left: 163px;
     top: 1170px;
+    max-width: 120px;
+    max-height: 120px;
   }
 
   .ellipse5 {
-    background: url("~@/assets/imgs/ellipse5.png");
+    background: url("~@/assets/imgs/ellipse5.png") no-repeat;
     position: absolute;
-    width: 87px;
-    height: 87px;
+    width: 100%;
+    height: 100%;
     left: 40px;
     top: 1456px;
+    max-height: 95px;
+    max-width: 95px;
   }
 
   .ellipse6 {
-    background: url("~@/assets/imgs/ellipse6.png");
+    background: url("~@/assets/imgs/ellipse6.png") no-repeat;
     position: absolute;
-    width: 69px;
-    height: 69px;
+    width: 100%;
+    height: 100%;
     left: 0px;
     top: 1220px;
+    max-height: 90px;
+    max-width: 90px;
   }
 
   .ellipse7 {
-    background: url("~@/assets/imgs/ellipse7.png");
+    background: url("~@/assets/imgs/ellipse7.png") no-repeat;
     position: absolute;
-    width: 154px;
-    height: 154px;
+    width: 100%;
+    height: 100%;
     left: 273px;
     top: 1422px;
+    max-width: 164px;
+    max-height: 174px;
   }
 
   .ellipse8 {
-    background: url("~@/assets/imgs/ellipse8.png");
+    background: url("~@/assets/imgs/ellipse8.png") no-repeat;
     position: absolute;
-    width: 216px;
-    height: 216px;
+    width: 100%;
+    height: 100%;
     left: 1112px;
     top: 1147px;
+    max-height: 236px;
+    max-width: 236px;
   }
 
   .ellipse9 {
-    background: url("~@/assets/imgs/ellipse9.png");
+    background: url("~@/assets/imgs/ellipse9.png") no-repeat;
     position: absolute;
-    width: 108px;
-    height: 108px;
+    width: 100%;
+    height: 100%;
     left: 1313px;
     top: 1450px;
+    max-width: 118px;
+    max-height: 118px;
   }
 
   .ellipse10 {
-    background: url("~@/assets/imgs/ellipse10.png");
+    background: url("~@/assets/imgs/ellipse10.png") no-repeat;
     position: absolute;
-    width: 49px;
-    height: 49px;
+    width: 100%;
+    height: 100%;
     left: 1478px;
     top: 1215px;
+    max-width: 60px;
+    max-height: 60px;
   }
 
   .carousel-inner {
@@ -180,8 +196,8 @@
   }
 
   .item {
-    height: 590px;
-    width: 975px;
+    height: 590px!important;
+    width: 100%!important;
   }
 
   .active{
@@ -194,7 +210,7 @@
 
   .item-img {
     background-repeat: no-repeat;
-    width: 100%;
+    min-width: 50%;
     height: 100%;
     background-position: center;
   }
@@ -217,10 +233,14 @@
   .carousel-control {
     width: 189px;
     height: 189px;
-    background: rgba(5, 1, 29, 0.24);
+    background: rgba(5, 1, 29, 0.24) !important;
     border-radius: 50%;
     position: absolute;
     top: 190px;
+  }
+
+  .carousel-control:hover {
+    background: rgba(5, 1, 29, 0.24) !important;
   }
 
   .left {
@@ -243,12 +263,22 @@
     position: absolute;
     top: 0;
     right: 60px;
+    color: rgba(6, 1, 29, 0.35);
   }
 
   .fa-angle-right:before {
     position: absolute;
     top: 0;
     left: 60px;
+    color: rgba(6, 1, 29, 0.35);
+  }
+
+  .fa-angle-left:before:hover {
+    color: rgba(6, 1, 29, 0.35);
+  }
+
+  .fa-angle-right:before:hover {
+    color: rgba(6, 1, 29, 0.35);
   }
 
   .item {
@@ -262,9 +292,9 @@
   }
 
   .item_content {
-    background: linear-gradient(94.49deg, #02001B 3.09%, #5B0563 132.69%);
     border-radius: 0px;
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient(94.49deg, #02001B 3.09%, #5B0563 132.69%);
   }
 
   .item_content-small-info {
@@ -310,7 +340,7 @@
     font-weight: bold;
     font-size: 30px;
     color: #DEDEDE;
-    max-width: 288px;
+    /*max-width: 288px;*/
     margin: 45px 169px 30px 33px;
     line-height: 39px;
   }
@@ -326,13 +356,18 @@
   }
 
   .item_content-info_time {
+    font-family: Roboto;
     font-weight: normal;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 34px;
     color: #BFBFBF;
     margin: 62px 0 39px 38px;
     padding-left: 20px;
-    border-left: 4px solid #626262;;
+    border-left: 5px solid #626262;;
+  }
+
+  .item_content-info_time span {
+    font-weight: bold;
   }
 
   @media only screen and (max-width: 1500px) {
@@ -467,4 +502,29 @@
       margin-left: 15px;
     }
     }
+
+  /*#myCarousel .carousel-inner>.item {*/
+  /*  transition: transform .8s ease-in-out,-webkit-transform .8s ease-in-out,-o-transform .8s ease-in-out;*/
+  /*}*/
+
+  .carousel-inner-rev {
+    background: linear-gradient(94.49deg, #02001B 3.09%, #5B0563 132.69%);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.24);
+    z-index: 1;
+  }
+
+  /*.carousel-fade .carousel-inner .item-slider {*/
+  /*  opacity: 0;*/
+  /*  transition-duration: .6s!important;*/
+  /*  transition-property: opacity!important;*/
+  /*}*/
+
+  .glyphicon-chevron-right img {
+    margin-left: 50px;
+    transform: rotate(180deg);
+  }
+
+  .glyphicon-chevron-left img {
+    margin-left: -95px;
+  }
 </style>

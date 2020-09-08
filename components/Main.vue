@@ -28,9 +28,9 @@
 <!--      <p class="main-reviews_all">Все Отзывы</p>-->
 <!--    </div>-->
       <div class="main-reviews">
-      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel2" class="carousel slide carousel-fade"  data-ride="carousel" data-interval="5000" data-pause="hover">
         <div class="carousel-inner">
-          <div class="item active">
+          <div class="item item-review active">
               <div class="main-reviews_user-data d-flex">
                 <div class="main-reviews_user-data_logo">
                   <img src="~@/assets/imgs/ellipse2.png" alt="">
@@ -53,9 +53,8 @@
               <div class="main-reviews_video-btn" data-toggle="modal" data-target="#myModal">
                 <i class="fas fa-play"></i> видео отзыв
               </div>
-              <p class="main-reviews_all">Все Отзывы</p>
             </div>
-          <div class="item">
+          <div class="item item-review">
               <div class="main-reviews_user-data d-flex">
                 <div class="main-reviews_user-data_logo">
                   <img src="~@/assets/imgs/ellipse2.png" alt="">
@@ -71,16 +70,40 @@
               </div>
               <div class="main-reviews_user-text">
                 <p>
-                  Начал работать с компанией две недели назад и результат не заставил себя ждать.
-                  Сегодня вывел свои первые средства, и решил написать отзыв,
-                  что все честно и без каких либо проблем.</p>
+                  Безумно рада, что начала работать с этой компанией.
+                  Я открыла для себя новый источник дохода и весьма немалый на сегодняшний день!
+                  Вы крутые, спасибо вам!</p>
               </div>
               <div class="main-reviews_video-btn" data-toggle="modal" data-target="#myModal2">
                 <i class="fas fa-play"></i> видео отзыв
               </div>
-              <p class="main-reviews_all">Все Отзывы</p>
           </div>
-
+          <div class="item item-review">
+              <div class="main-reviews_user-data d-flex">
+                <div class="main-reviews_user-data_logo">
+                  <img src="~@/assets/imgs/ellipse2.png" alt="">
+                </div>
+                <div class="main-reviews_user-data_name">
+                  <p>
+                    Алексей
+                  </p>
+                  <span>
+              5 дней назад
+          </span>
+                </div>
+              </div>
+              <div class="main-reviews_user-text">
+                <p>
+                  Ни разу не жалею что однажды рискнула поработать с вами!
+                  Начала с малого, и вот уже год работаем!
+                  Спасибо вам огромное, развития вашей команде и знайте,
+                  что мы в вас верим!</p>
+              </div>
+              <div class="main-reviews_video-btn" data-toggle="modal" data-target="#myModal2">
+                <i class="fas fa-play"></i> видео отзыв
+              </div>
+          </div>
+          <p class="main-reviews_all">Все Отзывы</p>
         </div>
       </div>
       </div>
@@ -234,13 +257,15 @@
           {{count}}
         </div>
       </div>
-        <form class="main-registration_form d-flex flex-column">
+        <div class="main-registration_form main_form d-flex flex-column" id="form" name="popform">
           <input type="text" placeholder="Ваше Имя">
           <input type="text" placeholder="Ваше email">
-          <input type="text" placeholder="+380 (96) 8798 685">
-          <a href="/registered" class="btn" >Консультация</a>
-          <p class="policy">Я ознакомлен с <span>политикой сайта</span></p>
-        </form>
+          <form action="">
+            <vue-phone-number-input v-model="phone"   type="tel" fetch-country no-validator-state placeholder="+380 (96) 8798 685" ></vue-phone-number-input>
+          </form>
+          <a href="/registered" class="btn btn-consult" >Консультация</a>
+          <a href="#" class="policy">Я ознакомлен с <span>политикой сайта</span></a>
+        </div>
 
     </div>
     </div>
@@ -282,8 +307,37 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VuePhoneNumberInput from 'vue-phone-number-input';
+  import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+  Vue.component('vue-phone-number-input', VuePhoneNumberInput);
+
+  import Form from "./Form";
   export default {
-    props: ['count']
+
+    data() {
+      return {
+        phone: ''
+      }
+    },
+    components: {Form},
+    props: ['count'],
+    link: [
+      // {rel: 'stylesheet', href: '~@/css/intlTelInput.scss'},
+      {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.css'},
+    ],
+    script: [
+      // {src: '~@/js/intlTelInput.js'},
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.js'},
+    ],
+    methods: {
+    },
+
+    mounted() {
+    },
+
+    created() {
+    }
   }
 </script>
 
@@ -304,7 +358,15 @@
     margin-top: 176px;
     text-align: left;
     margin-right: 34px;
-    width: 260px;
+    width: fit-content;
+  }
+
+  .main-reviews .carousel-inner{
+    width: fit-content;
+  }
+
+  .main-reviews .carousel-inner .item-review {
+    height: fit-content !important;
   }
 
   .main-reviews_user-data_logo {
@@ -327,7 +389,7 @@
   .main-reviews_user-data_name p {
     color: #BFBFBF;
     font-size: 18px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     font-style: normal;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
@@ -345,9 +407,9 @@
   .main-reviews_user-text p {
     color: #DBDBDB;
     font-size: 14px;
-    width: 269px;
+    width: 290px;
     margin-top: 32px;
-    font-family: 'Open Sans';
+    font-family: Open Sans, sans-serif;
     font-style: normal;
     font-weight: normal;
     line-height: 25px;
@@ -359,7 +421,7 @@
     background: #C4C4C4;
     border-radius: 100px;
     text-align: left;
-    padding-top: 14px;
+    padding-top: 12px;
     margin-top: 39px;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -370,9 +432,8 @@
   }
 
   .main-reviews_video-btn i {
-    padding-left: 11px;
-    padding-right: 14px;
-    padding-top: 1px;
+    padding-left: 25px;
+    padding-right: 10px;
     font-size: 14px;
   }
 
@@ -383,6 +444,10 @@
     font-family: 'Open sans';
     border-bottom: 1px solid;
     width: fit-content;
+  }
+
+  .item-review {
+    height: fit-content!important;
   }
 
   .main-logins {
@@ -449,7 +514,7 @@
     border-radius: 7px;
     margin-top: 36px;
     position: relative;
-    left: 15px;
+    left: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 27px;
@@ -470,15 +535,33 @@
     height: 59px;
     background: rgba(160, 157, 163, 0.25);
     border-radius: 100px;
-    color: #8D8D8D;
     margin-left: 55px;
     margin-top: 14px;
     padding-left: 36px;
     border: none;
     font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
   }
 
-  .main-registration_form a {
+  .main-registration_form input::placeholder {
+    color: #8D8D8D;
+  }
+
+  .main-registration_form input:hover {
+    background: rgba(160, 157, 163, 0.35);
+  }
+
+  .main-registration_form input:active {
+    background: rgba(160, 157, 163, 0.35);
+  }
+
+  .main-registration_form input:focus {
+    background: rgba(160, 157, 163, 0.35);
+  }
+
+  .main-registration_form .btn-consult {
     margin-top: 41px;
     width: 280px;
     height: 59px;
@@ -495,6 +578,10 @@
     line-height: 19px;
   }
 
+  .main-registration_form .btn-consult:hover {
+    background-color: #ecbe04;
+  }
+
   .main-registration_form .policy {
     color: #BCBCBC;
     font-weight: normal;
@@ -506,7 +593,7 @@
   }
 
   .main-registration_form .policy span {
-    color: royalblue;
+    color: #4b8def;
   }
 
   @media only screen and (max-width: 1370px) {
@@ -524,6 +611,12 @@
   @media only screen and (max-width: 1199px) {
     .main-reviews {
       display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1025px) {
+    #myCarousels .item {
+      height: fit-content;
     }
   }
 
@@ -550,6 +643,9 @@
     .main {
       background: url("~@/assets/imgs//rectangle90.png");
       max-height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     .main-logins {
@@ -636,4 +732,116 @@
     min-width: 800px;
     margin-top: 200px;
   }
+
+  .carousel-fade .item-review {
+    opacity: 0;
+    transition-duration: .6s;
+    transition-property: opacity;
+  }
+
+  #MazPhoneNumberInput {
+    width: 280px;
+    height: 59px;
+    background: rgba(160, 157, 163, 0.25);
+    border-radius: 100px;
+    margin-left: 55px;
+    margin-top: 14px;
+    padding-left: 36px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+  }
+
+  #MazPhoneNumberInput-23_country_selector {
+    width: 40px;
+    background: transparent;
+    color: #eaeaea;
+    border: none!important;
+  }
+
+  .dots-text {
+    /*display: none!important;*/
+  }
+
+  .country-selector__list[data-v-46e105de] {
+    max-width: 60px!important;
+    min-width: 60px!important;
+    text-align: center;
+  }
+
+  .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
+    max-width: fit-content;
+    min-width: 40px;
+    display: flex;
+  }
+
+  .country-selector[data-v-46e105de] {
+    height: 100%;
+  }
+
+  .vue-recycle-scroller .ready .direction-vertical {
+    max-width: 60px!important;
+  }
+
+  .input-tel__input[data-v-e59be3b4] {
+    z-index: 100!important;
+  }
+
+  #MazPhoneNumberInput-23_phone_number {
+    background: transparent;
+    border-radius: 100px;
+    border: none!important;
+    box-shadow: none!important;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+    height: 59px;
+    margin-top: 0!important;
+    caret-color: #EEEEEE!important;
+    -webkit-user-select: auto!important;
+    user-select: auto!important;
+    padding: 4px 0 5px;
+  }
+
+  .input-tel[data-v-e59be3b4] {
+    height: 100%;
+  }
+
+
+  .country-selector__toggle[data-v-46e105de] {
+    right: 45px;
+    top: calc(50% - 11px);
+  }
+
+  .country-selector__country-flag[data-v-46e105de] {
+    left: 4px!important;
+    top: 22px;
+  }
+  .country-selector.has-hint .country-selector__input[data-v-46e105de], .country-selector.has-value .country-selector__input[data-v-46e105de] {
+    padding: 0;
+  }
+
+  #MazPhoneNumberInput-23_country_selector {
+    border: none!important;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-family: Open Sans;
+  }
+
+  #MazPhoneNumberInput-23_country_selector:focus {
+    border: none!important;
+    box-shadow: none!important;
+  }
+
+  .input-tel__label[data-v-e59be3b4] {
+    display: none;
+  }
+
+  .country-selector__label {
+    display: none;
+  }
+
 </style>

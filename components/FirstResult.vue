@@ -1,26 +1,26 @@
 <template>
-  <div class="first-result">
+  <div class="first-result countTop">
    <div class="first-result_container container d-flex justify-content-between">
     <div class="first-result_numbers">
       <div class="first-result_numbers-data">
-      <h3>50 000+</h3>
-      <div class="underline-num"></div>
+        <div class="underline-num"></div>
+        <h3><span class="count1">50 000</span>+</h3>
       <p>Клиентов уже работают с нами</p>
       </div>
       <div class="first-result_numbers-data">
-      <h3>20+</h3>
-      <div class="underline-num underline-num_short"></div>
-      <p>Клиентов уже работают с нами</p>
+        <div class="underline-num underline-num_short"></div>
+        <h3><span class="count2">20</span>+</h3>
+      <p>Лет опыта работы с клиентами</p>
       </div>
       <div class="first-result_numbers-data">
-      <h3>90 000+</h3>
-      <div class="underline-num"></div>
-      <p>Клиентов уже работают с нами</p>
+        <div class="underline-num"></div>
+        <h3><span class="count3">200 000</span>+</h3>
+      <p>Клиентов уже заработало с нами</p>
       </div>
       <div class="first-result_numbers-data">
-      <h3>30+</h3>
-      <div class="underline-num underline-num_short"></div>
-      <p>Клиентов уже работают с нами</p>
+        <div class="underline-num underline-num_short"></div>
+        <h3><span class="count4">100</span>+</h3>
+      <p>Отделов которые работают с клиентами.</p>
       </div>
     </div>
     <div class="first-result_week-result">
@@ -38,14 +38,14 @@
         <h2>02</h2>
         <div class="first-result_week-result_steps-onestep_info">
         <h3>Расчет вашего дохода</h3>
-        <p>Наши эксперты ответят на все ваши вопросы перед тем как предложить вам сотрудничество.</p>
+        <p>Мы предоставляем вам расчёт от вашей вложенной суммы на выбранный период.</p>
         </div>
       </div>
       <div class="first-result_week-result_steps-onestep">
         <h2>03</h2>
         <div class="first-result_week-result_steps-onestep_info">
-        <h3>Сотрудничество и заработок</h3>
-        <p>Наши эксперты ответят на все ваши вопросы перед тем как предложить вам сотрудничество.</p>
+        <h3>Сотрудничество и первый результат</h3>
+        <p> Сделать первый шаг и получить результат, который был представлен в расчёте без рисков.</p>
         </div>
       </div>
       </div>
@@ -74,8 +74,9 @@
                             <span class="qis-slidercenter"><output>{{month}} месяц</output></span>
                             <span class="qis-sliderright qis-max">12 Месяц</span>
                           </div>
-                          <input type="range" name="loan-period" min="1" max="12" value="6"
+                          <input type="range" class="range" name="loan-period" min="1" max="12" value="6"
                                  step="1" v-model="month" v-on:change="monthVal" v-on:input="monthVal">
+                          <progress id="monthProg"  min="1" max="12" value="6"></progress>
                         </div>
                         <div class="range qis-slider-principal">
                           <div class="qis-slideroutput qis-loan">
@@ -83,8 +84,10 @@
                             <span class="qis-slidercenter"><output>{{moneyArr[money]}}$</output></span>
                             <span class="qis-sliderright qis-max">$10000 </span>
                           </div>
-                          <input type="range" name="loan-money" min="0" max="11" value="5"
+                          <input type="range" class="range" name="loan-money" min="0" max="11" value="5"
                                  step="1" v-model="money" v-on:change="moneyVal" v-on:input="moneyVal">
+                          <progress id="moneyProg" min="0" max="11" value="5"
+                                    step="1"></progress>
                         </div>
                         <div class="qis-repayments">
                           <div class="row justify-content-between">
@@ -105,7 +108,7 @@
 
                       </div>
                     </div>
-                    <h3 class="individual">
+                    <h3 class="individual" v-on:click="scrollToTop()">
                       ИНДИВИДУАЛЬНЫЙ РАСЧЕТ  <i class="fas fa-long-arrow-alt-right"></i>
                     </h3>
                     <p class="individual_comment">Цифры представлены могут незначительно отличаться от итогового дохода.</p>
@@ -117,7 +120,7 @@
         </div>
         <div class="el-region-calc_consultation">
           <h3 class="el-region-calc_consultation-h3">Хотите что-то уточнить?</h3>
-          <p class="el-region-calc_consultation-p">Консультация бесплатна</p>
+          <p class="el-region-calc_consultation-p">Консультация бесплатна*</p>
           <div @click='scrollToTop()' class="el-region-calc_consultation-btn d-flex">
             <p>КОНСУЛЬТАЦИЯ</p>
             <i class="fas fa-long-arrow-alt-right"></i>
@@ -148,6 +151,8 @@
     color: #000000;
     width: 184px;
     font-family: Roboto;
+    position: relative;
+    z-index: 1;
   }
 
   .first-result_numbers-data p {
@@ -162,9 +167,8 @@
     height: 22px;
     background: #ECE204;
     position: relative;
-    bottom: 29px;
+    top: 55px;
     left: 32px;
-    opacity: 0.6;
   }
 
   .underline-num_short {
@@ -195,12 +199,13 @@
     color: #505050;
     margin-top: 42px;
     font-family: Roboto;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 
   .first-result_week-result_steps {
     background: #F2F2F2;
     width: 614px;
+    height: 756px;
   }
 
   .first-result_week-result_steps-onestep {
@@ -233,7 +238,7 @@
 
   .first-result_week-result_steps-onestep_info {
     width: 260px;
-    margin-left: 70px;
+    margin-left: 34px;
   }
 
   .first-result_week-result_steps-onestep_info h3 {
@@ -241,7 +246,7 @@
     font-size: 25px;
     color: #303030;
     padding-top: 20px;
-    width: 165px;
+    width: 182px;
     font-family: Roboto;
   }
 
@@ -249,7 +254,7 @@
     font-weight: normal;
     font-size: 15px;
     color: #5A5A5A;
-    margin-top: 38px;
+    margin-top: 30px;
     font-family: Roboto;
   }
 
@@ -380,6 +385,7 @@
     font-size: 13px;
     color: #B4B4B4;
     margin-left: 10px;
+    padding-bottom: 38px;
   }
 
   .first-result_calculator {
@@ -398,8 +404,6 @@
   .el-region-calc > div {
     padding:60px 40px 20px;
     background: #272359;
-    border-radius: 5px;
-    box-shadow: 4px 4px 40px #44444470;
     width: 457px;
     height: 648px;
     background: linear-gradient(132.44deg, #090120 12.06%, #40044D 88.18%);
@@ -458,6 +462,24 @@
     cursor: pointer;
   }
 
+  .el-region-calc_consultation-btn:hover {
+    background-color: #ecbe04;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
+  }
+
+  .el-region-calc_consultation-btn:hover  .fa-long-arrow-alt-right {
+    animation-name: arrow;
+    animation-duration: .6s;
+    position: relative;
+    left: 50px;
+  }
+
+  @keyframes arrow {
+    0% {left: 0}
+    100% {left: 50px;}
+  }
+
   .el-region-calc_consultation-btn p {
     padding: 20px 0 18px 23px;
     font-family: Roboto;
@@ -492,29 +514,32 @@
   }
 
   input[type='range'] {
-    background-color: rgba(196, 196, 196, 0.63);
+    background-color: transparent;
     border-radius: 21px;
     -webkit-appearance: none;
     height: 11px;
     /*background-color: #9a905d;*/
     outline: none;
+    position: relative;
+    z-index: 100;
   }
 
   input[type='range']::-webkit-slider-runnable-track {
     -webkit-appearance: none;
   }
 
-
   input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     cursor: ew-resize;
     width: 28px;
     height: 28px;
-    background: #1D0330;
+    background: #1D0330!important;
     border-radius: 50%;
     border: 6px solid #C4C4C4;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.53);
+    z-index: 1000;
   }
+
 
   .qis__handle {
     border: 6px solid #eaeaea;
@@ -528,7 +553,7 @@
     font-weight: normal;
     font-size: 18px;
     color: #939393;
-    margin-top: 58px;
+    margin-top: 36px;
     margin-left: 10px;
   }
   .qis-repayments .val:not(:last-child) {
@@ -669,6 +694,32 @@
       right: 0;
       padding-top: 15px;
     }
+
+    .individual {
+      display: none;
+    }
+
+    .el-region-calc_consultation {
+      position: relative;
+      bottom: 65px;
+      background: linear-gradient(132.44deg, #090120 12.06%, #40044D 88.18%) !important;
+      box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.25);
+      border-radius: 12px;
+      width: 345px!important;
+    }
+
+    .first-result_week-result .first-result_week-result_txt {
+      font-weight: 900;
+      color: #505050;
+      font-family: Roboto;
+      margin-top: 0;
+      position: relative;
+      top: 900px;
+    }
+
+    .first-result_week-result_steps {
+      top: 835px;
+    }
   }
 
   @media only screen and (max-width: 992px) {
@@ -756,6 +807,30 @@
     }
   }
 
+  progress {
+    width: 100%;
+    height: 11px;
+    background: #4b2d58;
+    border-radius: 21px;
+    position: relative;
+    bottom: 11px;
+    z-index: 0;
+    border: 0.1px solid rgba(196, 196, 196, 0.22);
+  }
+
+  progress[value]::-webkit-progress-value {
+    background: rgba(196, 196, 196, 0.63);
+    border-radius: 21px;
+  }
+
+  #moneyProg {
+    border-radius: 21px!important;
+  }
+
+  #monthProg {
+    border-radius: 21px!important;
+  }
+
 </style>
 
 <script>
@@ -766,7 +841,38 @@
         month: 6,
         money: 5,
         moneyArr: [250,500,750,1000 ,1500 ,2000 ,2500, 3000, 3500, 4000, 4500 ,5000],
-        result: 12000
+        result: '12 000'
+      }
+    },
+
+    mounted() {
+      var target = $('.count');
+      var targetPos = target.offset().top + 100;
+      var winHeight = $(window).height();
+      var scrollToElem = targetPos - winHeight;
+      $(window).scroll(function(){
+        var winScrollTop = $(this).scrollTop();
+        if(winScrollTop > scrollToElem){
+          counter('.count1', 50000)
+          counter('.count2', 20)
+          counter('.count3', 200000)
+          counter('.count4', 100)
+        }
+        return
+      });
+
+      function counter(counter, value) {
+        $(counter).each(function () {
+          $(this).prop('Counter', 0).animate({
+            Counter: value,
+          }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+              if ($(this).text(Math.ceil(+now)) === counter) return
+            }
+          });
+        })
       }
     },
 
@@ -779,14 +885,25 @@
           behavior: 'smooth'
         })
       },
-      monthVal() {
+      monthVal(event) {
+        document.querySelector('#monthProg').value = event.target.value
         this.calculateTotal()
       },
-      moneyVal() {
+      moneyVal(event) {
+        document.querySelector('#moneyProg').value = event.target.value
         this.calculateTotal()
       },
       calculateTotal() {
-        this.result = this.month * this.moneyArr[this.money]
+        let preparVal = (this.month * this.moneyArr[this.money]).toString().split('')
+        if (preparVal.length > 3) {
+          if (preparVal.length === 4) {
+            preparVal.splice(1, 0, " ");
+          } else if (preparVal.length === 5) {
+            preparVal.splice(2, 0, " ");
+          }
+
+        }
+        this.result = preparVal.join('')
       }
     }
   }

@@ -53,7 +53,7 @@
   }
 
   .header-content_timer p {
-    font-family: Roboto sans-serif;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -94,44 +94,56 @@
 <script>
 
   export default {
-
     data() {
       return {
-        hourCount: 6,
-        minutesCount: 32,
-        timerCount: 18,
+        hourCount: '',
+        minutesCount: '',
+        timerCount:  '',
       }
     },
 
-    watch: {
+    created() {
+      if (process.client) {
+        this.timerCount =  (localStorage.getItem('timerCount')) ? localStorage.getItem('timerCount') : 18;
+        this.hourCount =  (localStorage.getItem('hourCount')) ? this.hourCount = localStorage.getItem('hourCount') : 6;
+        this.minutesCount = (localStorage.getItem('minutesCount')) ? localStorage.getItem('minutesCount') : 52;
+      }
 
+    },
+
+    watch: {
       timerCount: {
         handler(value) {
           if (value > 0) {
             setTimeout(() => {
               this.timerCount--;
             }, 1000);
+              if (process.client) {
+                localStorage.setItem('timerCount', this.timerCount )
+              }
           }
           if (value === 0) {
             if (this.minutesCount !== 0) {
               this.minutesCount--;
               this.timerCount = 59;
+              localStorage.setItem('minutesCount', this.minutesCount)
             } else {
               if (this.hourCount !== 0) {
                 this.hourCount--
                 this.minutesCount = 59;
                 this.timerCount = 59;
+                localStorage.setItem('hourCount', this.hourCount)
+                localStorage.setItem('minutesCount', this.minutesCount)
               } else {
                 this.timerCount = 0;
               }
             }
           }
         },
-
         immediate: true
       }
-
     },
+
   }
 
 </script>

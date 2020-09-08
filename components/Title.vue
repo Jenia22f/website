@@ -266,12 +266,12 @@
   }
 
   .title-container_logo img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .title-container_title {
-    font-family: Roboto sans-serif;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
@@ -314,7 +314,7 @@
   }
 
   .title-container_registered-user_name {
-    font-family: Roboto sans-serif;
+    font-family: Roboto, sans-serif;
     text-align: left;
     padding-left: 18px;
     line-height: 1;

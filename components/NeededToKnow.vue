@@ -8,6 +8,7 @@
         <div @click='scrollToTop()' class="neededToKnow_with-girl_whatToKnow-consult-btn d-flex">
           <p>КОНСУЛЬТАЦИЯ</p> <i class="fas fa-long-arrow-alt-right"></i>
         </div>
+          <p class="free-cons">*консультация бесплатна</p>
         </div>
       </div>
     </div>
@@ -90,6 +91,24 @@
     cursor: pointer;
   }
 
+  .neededToKnow_with-girl_whatToKnow-consult-btn:hover {
+    background-color: #ecbe04;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
+  }
+
+  .neededToKnow_with-girl_whatToKnow-consult-btn:hover  .fa-long-arrow-alt-right {
+    animation-name: arrow;
+    animation-duration: .6s;
+    position: relative;
+  left: 50px;
+  }
+
+  @keyframes arrow {
+    0% {left: 0}
+    100% {left: 50px;}
+  }
+
   .neededToKnow_with-girl_whatToKnow-consult-btn p {
     font-family: 'Roboto', sans-serif;
     color: #000000;
@@ -108,7 +127,8 @@
     display: grid;
     grid-template-columns: 298px 322px;
     margin-left: 113px;
-    margin-top: 50px;
+    margin-top: 40px;
+    grid-row-gap: 30px;
   }
 
   .neededToKnow_opportunities-for-each {
@@ -125,8 +145,9 @@
     font-weight: 900;
     font-size: 22px;
     color: #333333;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     width: 256px;
+    position: relative;
   }
 
   .underline {
@@ -136,7 +157,6 @@
     position: relative;
     top: 50px;
     left: 18px;
-    opacity: 0.6;
   }
 
   .neededToKnow_opportunities-for-each p {
@@ -220,8 +240,14 @@
     }
 
     .neededToKnow_with-girl_whatToKnow-consult-btn {
-      top: 450px;
+      top: 550px;
     }
+    .free-cons {
+      position: relative;
+      top: 539px;
+    }
+
+
   }
 
   @media only screen and (max-width: 861px) {
@@ -239,9 +265,6 @@
       margin-right: 20px;
     }
 
-    .neededToKnow_with-girl_whatToKnow-consult-btn {
-      top: 400px;
-    }
   }
 
   @media only screen and (max-width: 564px) {
@@ -263,7 +286,11 @@
     }
 
     .neededToKnow_with-girl_whatToKnow-consult-btn {
-      top: 720px;
+      top: 880px;
+    }
+
+    .free-cons {
+      top: 890px
     }
 
     .main-registration_count {
@@ -275,6 +302,11 @@
     }
 
     .main-registration_form input {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-registration_form .btn-consult {
       margin-left: auto;
       margin-right: auto;
     }
@@ -306,6 +338,16 @@
       margin-left: 32px;
     }
 
+  }
+
+  .free-cons {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #CDCDCD;
+    margin-top: 23px;
   }
 
 </style>

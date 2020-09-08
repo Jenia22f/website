@@ -5,15 +5,15 @@
 
 <template>
   <div>
-    <Header />
-    <Title />
-    <Main :count="count" />
-    <Partners />
-    <Slider />
-    <NeededToKnow />
-    <FirstResult />
-    <Reviews />
-    <Form :thousands="thousands" :hundreds="hundreds" :tens="tens" :units="units" />
+    <Header/>
+    <Title/>
+    <Main :count="count"/>
+    <Partners/>
+    <Slider/>
+    <NeededToKnow/>
+    <FirstResult/>
+    <Reviews/>
+    <Form :thousands="thousands" :hundreds="hundreds" :tens="tens" :units="units"/>
   </div>
 </template>
 <script>
@@ -26,42 +26,58 @@
   import FirstResult from '@/components/FirstResult'
   import Reviews from '@/components/Reviews'
   import Form from '@/components/Form'
-export default {
+  // import cookies from '@/middleware/cookies'
 
-component: {
-Header, Title, Main, Partners,
-Slider, NeededToKnow, FirstResult, Reviews, Form,
-},
 
-data() {
-return {
-count: 5168,
-thousands: 5,
-hundreds: 1,
-tens: 6,
-units: 8
-}
-},
-watch: {
+  export default  {
+    // middleware: 'cookies',
+    component: {
+      Header, Title, Main, Partners,
+      Slider, NeededToKnow, FirstResult, Reviews, Form,
+    },
 
-count: {
-handler(value) {
-if (value > 0) {
-setTimeout(() => {
-this.count = this.count + Math.floor(Math.random() * Math.floor(15));
-this.thousands = String(this.count).split('')[0]
-this.hundreds = String(this.count).split('')[1]
-this.tens = String(this.count).split('')[2]
-this.units = String(this.count).split('')[3]
+    data() {
+      // if (process.client) {
+      //   let reg = localStorage.getItem('registr')
+      // }
+      return {
+        count: '',
+        thousands: 5,
+        hundreds: 1,
+        tens: 6,
+        units: 8
+      }
+    },
 
-}, (Math.floor(Math.random() * Math.floor(7)) * 1000));
-}
-},
-immediate: true, // This ensures the watcher is triggered upon creation
-},
+    created() {
+      if (process.client) {
+            this.count = localStorage.getItem('registr') ? +localStorage.getItem('registr') : 5168
+      }
 
-}
-}
+    },
+
+    watch: {
+
+      count: {
+        handler(value) {
+          if (value > 0) {
+            setTimeout(() => {
+              this.count = this.count + Math.floor(Math.random() * Math.floor(90));
+              if (process.client) localStorage.setItem('registr', this.count)
+              this.thousands = String(this.count).split('')[0]
+              this.hundreds = String(this.count).split('')[1]
+              this.tens = String(this.count).split('')[2]
+              this.units = String(this.count).split('')[3]
+
+            }, (Math.floor(Math.random() * Math.floor(5)) * 1000));
+          }
+
+        },
+        immediate: true, // This ensures the watcher is triggered upon creation
+      },
+
+    }
+  }
 </script>
 
 

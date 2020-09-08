@@ -15,83 +15,90 @@
           <li class="active"><a data-toggle="tab" href="#menu0" class="d-flex">
             <img src="~@/assets/imgs/rectangle74.png" alt="">
             <div class="user-data">
-              <p>Мирослава Цибуля</p>
-              <span>продавец цибули</span>
+              <p>Андрей Козин</p>
+              <span>пенсионер</span>
             </div>
           </a></li>
           <li><a data-toggle="tab" href="#menu1" class="d-flex">
             <img src="~@/assets/imgs/rectangle74.png" alt="">
             <div class="user-data">
-              <p>Мирослава Цибуля</p>
-              <span>продавец цибули</span>
+              <p>Анастасия Каразина</p>
+              <span>Фитнес - тренер</span>
             </div>
           </a></li>
           <li><a data-toggle="tab" href="#menu2" class="d-flex">
             <img src="~@/assets/imgs/rectangle74.png" alt="">
             <div class="user-data">
-              <p>Мирослава Цибуля</p>
-              <span>продавец цибули</span>
+              <p>Анна Гольц</p>
+              <span>Мама в декрете</span>
             </div>
           </a></li>
         </ul>
 
         <div class="tab-content">
           <div id="menu0" class="tab-pane fade in active">
+            <span class="material-icons playbtn" id="playbtn1" v-on:click="onPlayVideo('firstVideo', 'playbtn1', 'poster1')">play_arrow</span>
             <div class="d-flex">
             <div class="tab-content_video">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6MfdjuzcPJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <img class="poster" id="poster1" v-on:click="onPlayVideo('firstVideo')" src="~@/assets/imgs/maxresdefault.jpg" alt="">
+              <iframe class="unvisVideo" id="firstVideo" width="100%" height="100%" src="https://www.youtube.com/embed/6MfdjuzcPJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
               <div class="review-content">
                 <div class="review-content_time"><p>отзыв оставлен 2 дня назад</p> <div class="videobtn"><i class="fas fa-play"></i> видео отзыв</div></div>
-                <div class="starts d-flex">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <div class="stars d-flex">
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
                 </div>
-                <img src="~@/assets/imgs//format_quote.png" alt="">
-                <p class="review-content_text">Безусловно когда я только начинал работать с брокерами я очень боялся потери денег.
-                  Но с GlobalMaxis потерь у меня нет, а потому мне с этим брокеров бояться нечего!</p>
+                <img src="~@/assets/imgs/format_quote.png" alt="">
+                <p class="review-content_text">Очень жалею что раньше не работал с этой компанией. Очень доволен результатом.
+                  А все началось с того что просто решил попробовать с малого! </p>
               </div>
             </div>
           </div>
           <div id="menu1" class="tab-pane fade">
+            <span class="material-icons playbtn" id="playbtn2" v-on:click="onPlayVideo('secondVideo', 'playbtn2', 'poster2')">play_arrow</span>
             <div class="d-flex">
               <div class="tab-content_video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lo0ELoepTCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img class="poster" id="poster2" v-on:click="onPlayVideo('secondVideo')" src="~@/assets/imgs/maxresdefault(1).jpg" alt="">
+                <iframe class="unvisVideo" id="secondVideo"  width="100%" height="100%" src="https://www.youtube.com/embed/Lo0ELoepTCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="review-content">
                 <div class="review-content_time"><p>отзыв оставлен 3 дня назад</p> <div class="videobtn"><i class="fas fa-play"></i> видео отзыв</div></div>
-                <div class="starts d-flex">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <div class="stars d-flex">
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons grey">grade</span>
                 </div>
                 <img src="~@/assets/imgs//format_quote.png" alt="">
-                <p class="review-content_text">Безусловно когда я только начинал работать с брокерами я очень боялся потери денег.
-                  Но с GlobalMaxis потерь у меня нет, а потому мне с этим брокеров бояться нечего!</p>
+                <p class="review-content_text">Рекомендую! Сама удовлетворена и знакомым посоветовала. Очень приятная компания, работа которой заслуживает внимания!
+                  Одни из немногих, кому можно доверять.</p>
               </div>
             </div>
           </div>
           <div id="menu2" class="tab-pane fade">
+            <span class="material-icons playbtn" id="playbtn3" v-on:click="onPlayVideo('thirdVideo', 'playbtn3', 'poster3')">play_arrow</span>
             <div class="d-flex">
               <div class="tab-content_video">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lo0ELoepTCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img class="poster" id="poster3" v-on:click="onPlayVideo('thirdVideo')" src="~@/assets/imgs/maxresdefault(1).jpg" alt="">
+                <iframe class="unvisVideo" id="thirdVideo" width="100%" height="100%" src="https://www.youtube.com/embed/Lo0ELoepTCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="review-content">
                 <div class="review-content_time"><p>отзыв оставлен 4 дня назад</p> <div class="videobtn"><i class="fas fa-play"></i> видео отзыв</div></div>
-                <div class="starts d-flex">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <div class="stars d-flex">
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
+                  <span class="material-icons">grade</span>
                 </div>
                 <img src="~@/assets/imgs//format_quote.png" alt="">
-                <p class="review-content_text">Безусловно когда я только начинал работать с брокерами я очень боялся потери денег.
-                  Но с GlobalMaxis потерь у меня нет, а потому мне с этим брокеров бояться нечего!</p>
+                <p class="review-content_text">Безумно довольна результатом и помимо этого очень комфортно.
+                  Не требует много времени, и в итоге получаю крутой результат!</p>
               </div>
             </div>
           </div>
@@ -111,7 +118,7 @@
 
   .reviews-consultation {
     background: linear-gradient(149.4deg, #EFEFEF -0.6%, #090120 -0.59%, #40044D 78.1%);
-    width: 30%;
+    min-width: 30%;
     height: 100%;
   }
 
@@ -143,6 +150,23 @@
     cursor: pointer;
   }
 
+  .reviews-consultation_btn:hover {
+    background-color: #ecbe04;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
+  }
+
+  .reviews-consultation_btn:hover  .fa-long-arrow-alt-right {
+    animation-name: arrow;
+    animation-duration: .6s;
+    position: relative;
+    left: 50px;
+  }
+
+  @keyframes arrow {
+    0% {left: 0}
+    100% {left: 50px;}
+  }
   .reviews-consultation_btn p {
     font-family: Roboto;
     font-weight: normal;
@@ -160,7 +184,7 @@
   }
 
   .reviews-list {
-    width: 70%;
+    min-width: 70%;
     margin-left: 52px;
   }
 
@@ -176,10 +200,14 @@
     width: 292px;
     height: 77px;
     border-radius: 10px;
+    padding: 10px 15px 7px;
   }
 
   .nav>li>a img {
     margin-right: 17px;
+    width: 60px;
+    height: 60px;
+    border-radius: 19px;
   }
 
   .user-data p {
@@ -214,7 +242,6 @@
   }
 
   .tab-content {
-    margin-top: 61px;
     margin-left: 9px;
   }
 
@@ -228,9 +255,13 @@
     display: none;
   }
 
-  .starts .fas {
+  .stars span {
     font-size: 25px;
     color: #FFDF34;
+  }
+
+  .stars .grey {
+    color: #9A9A9A;
   }
 
    .review-content img {
@@ -246,7 +277,6 @@
     font-size: 17px;
     color: #343434;
     width: 317px;
-    margin-top: 38px;
     line-height: 30px;
   }
 
@@ -370,10 +400,18 @@
     .nav>.active {
       width: 270px;
     }
+
+    .reviews-consultation h3 {
+      max-width: 300px;
+    }
   }
 
   @media only screen and (max-width: 861px) {
     .tab-content_video {
+      display: none;
+    }
+
+    .playbtn {
       display: none;
     }
 
@@ -422,6 +460,38 @@
       width: 290px;
     }
   }
+
+  .unvisVideo {
+    display: none;
+  }
+
+  .poster {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .playbtn {
+    position: relative;
+    top: 195px;
+    left: 195px;
+    font-size: 70px;
+    color: #9A9A9A;
+    cursor: pointer;
+  }
+
+  .dnone {
+    display: none;
+  }
+
+  .invis {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .user-data {
+    padding-top: 8px;
+  }
 </style>
 
 <script>
@@ -434,6 +504,13 @@
           behavior: 'smooth'
         })
       },
+
+
+      onPlayVideo(id, btn, frame) {
+        document.querySelector(`#${id}`).classList.toggle('unvisVideo')
+        document.querySelector(`#${btn}`).classList.toggle('invis')
+        document.querySelector(`#${frame}`).classList.toggle('dnone')
+      }
     }
   }
 </script>

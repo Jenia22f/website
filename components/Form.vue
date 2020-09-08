@@ -21,7 +21,7 @@
                 <p>Заключение договора о сотрудничестве</p>
               </div>
               <div class="form-registration_steps-boxes_fr">
-                <h3>04</h3>
+                <h3 style="color: #ECE204;">04</h3>
                 <p>Получение пассивного заработка</p>
               </div>
             </div>
@@ -35,11 +35,13 @@
                 <div class="form-registration_form-number-today_num">{{units}}</div>
               </div>
               <p class="form-registration_form-number-today_p">Зарегистрировались сегодня</p>
-              <form class="form-registration_form-fields" action="#">
+              <div class="form-registration_form-fields" action="#">
                 <input type="text" placeholder="Ваше имя">
                 <input type="text" placeholder="Ваше email">
-                <input type="text" placeholder="+380 (96) 8798 685">
-              </form>
+                <form action="">
+                  <vue-phone-number-input v-model="phoneNum"   type="tel" fetch-country no-validator-state placeholder="+380 (96) 8798 685" ></vue-phone-number-input>
+                </form>
+              </div>
               <nuxt-link exact to="/registered">
               <button class="form-registration_form-btn" type="submit">НАЖМИ МЕНЯ</button>
               </nuxt-link>
@@ -64,7 +66,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">250$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">3500$</p>
                   </div>
                 </div>
@@ -87,7 +89,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">150$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">1600$</p>
                   </div>
                 </div>
@@ -110,7 +112,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">550$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">15500$</p>
                   </div>
                 </div>
@@ -133,7 +135,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">300$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">2500$</p>
                   </div>
                 </div>
@@ -156,7 +158,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">200$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">4000$</p>
                   </div>
                 </div>
@@ -179,7 +181,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">250$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">2500$</p>
                   </div>
                 </div>
@@ -202,7 +204,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">250$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">5000$</p>
                   </div>
                 </div>
@@ -225,7 +227,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">150$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">2000$</p>
                   </div>
                 </div>
@@ -248,7 +250,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">350$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">5000$</p>
                   </div>
                 </div>
@@ -271,7 +273,7 @@
                   </div>
                   <div class="visa-card_body-money d-flex justify-content-around">
                     <p class="first">250$</p>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <span class="material-icons arrow-money-right">arrow_right_alt</span>
                     <p class="second">5500$</p>
                   </div>
                 </div>
@@ -286,7 +288,7 @@
           <p>
             We have placed cookies on your computer to help improve your experience when visiting this website. You can change cookie settings on your computer at any tim
           </p>
-          <p>Privacy Policy | Agreement</p>
+          <a href="#">Privacy Policy | Agreement</a>
         </div>
 
       </div>
@@ -300,26 +302,23 @@
 
   .form {
     margin-top: 381px;
-    padding-bottom: 50px;
   }
 
   .form-container {
-    height: 717px;
+    height: fit-content;
     background-image: url("~@/assets/imgs/rectangle78.png");
     background-position: center;
     background-repeat: no-repeat;
     /*background-image: url(""), no-repeat, center;*/
     border-radius: 56px;
-    padding-bottom: 50px;
   }
 
   .form-registration {
-    margin: 0 auto;
     width: 928px;
     height: 586px;
     background: linear-gradient(180deg, #090120 0%, #40044D 100%);
     position: relative;
-    bottom: 80px;
+    bottom: 100px;
     text-align: center;
   }
 
@@ -330,6 +329,7 @@
   .form-registration_steps-admin_photo {
     position: relative;
     bottom: 30px;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.18));
   }
 
   .form-registration_steps-title {
@@ -396,12 +396,11 @@
   }
 
   .form-registration_form {
-    min-width: 338px;
+    max-width: 338px;
     height: 531px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    margin-top: 24px;
-    margin-left: 54px;
+    margin: 24px 118px 31px 30px;
   }
 
   .form-registration_form-number-today {
@@ -444,11 +443,15 @@
     font-family: Open Sans;
     font-weight: 600;
     font-size: 14px;
-    color: #8D8D8D;
+    color: #eaeaea;
     border: none;
     padding-left: 36px;
     margin-bottom: 14px;
     outline: none;
+  }
+
+  .form-registration_form-fields input::placeholder {
+    color: #8D8D8D;
   }
 
   .form-registration_form-btn {
@@ -464,6 +467,7 @@
     outline: none;
     margin-bottom: 20px;
     border: none;
+    margin-top: 41px;
   }
 
   .form-registration_form-policy {
@@ -479,7 +483,7 @@
 
   .visa-container {
     position: absolute;
-    left: 900px;
+    left: 874px;
     top: 40px;
     max-height: 500px;
     overflow: hidden;
@@ -489,7 +493,7 @@
     min-width: 340px;
     height: 154px;
     background: #030016;
-    /*box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.24);*/
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.24);
     border-radius: 10px;
     margin-bottom: 13px;
     position: relative;
@@ -554,11 +558,14 @@
 
   .visa-card_header-user_data img {
     margin: 16px 14px 0 14px;
+    width: 40px;
+    height: 40px;
   }
 
   .visa-card_header-user_data-info {
     margin-top: 20px;
     font-family: 'Roboto', sans-serif;
+    text-align: left;
   }
 
   .visa-card_header-user_data-info p {
@@ -589,21 +596,24 @@
 
   .visa-card_body-text {
     margin-left: 14px;
+    text-align: left;
   }
 
   .visa-card_body-text_output {
     font-size: 13px;
     color: #666565;
+    margin-bottom: 0;
   }
 
   .visa-card_body-text_time {
     font-size: 13px;
     color: #B7B7B7;
+    margin-top: 2px;
   }
 
   .visa-card_body-money {
     max-width: 194px;
-    min-width: 180px;
+    width: fit-content;
     height: 45px;
     background: rgba(196, 196, 196, 0.08);
     border-radius: 7px;
@@ -616,12 +626,14 @@
     font-weight: bold;
     font-size: 25px;
     color: #747272;
+    margin-left: 11px;
   }
 
   .visa-card_body-money .second {
     font-weight: bold;
     font-size: 25px;
     color: #D6D6D6;
+    margin-right: 12px;
   }
 
   .visa-card_body-money i {
@@ -632,11 +644,13 @@
 
   .footer {
     text-align: center;
+    position: relative;
+    bottom: 25px;
   }
 
   .footer-logo {
-    width: 58px;
-    height: 56px;
+    width: 100px;
+    height: 100px;
     /*background: #C4C4C4;*/
     border-radius: 100px;
     margin: 0 auto;
@@ -650,6 +664,18 @@
   /*}*/
 
   .footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 20px auto 5px;
+    color: #9E9E9E;
+    max-width: 754px;
+    position: relative;
+    bottom: 15px;
+    max-width: 620px;
+  }
+
+  .footer a {
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 14px;
@@ -726,9 +752,135 @@
       padding-left: 34px;
     }
   }
+
+  .arrow-money-right {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 9px;
+    color: #96C97E;
+    margin: 14px 5px 8px 3px;
+  }
+
+  .form-registration_form #MazPhoneNumberInput {
+    width: 280px;
+    height: 59px;
+    background: rgba(160, 157, 163, 0.25);
+    border-radius: 100px;
+    margin: 0 auto!important;
+    padding-left: 36px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+  }
+
+  #MazPhoneNumberInput-35_country_selector {
+    width: 40px;
+    background: transparent;
+    color: #eaeaea;
+    border: none!important;
+    margin-left: 50px;
+  }
+
+  .dots-text {
+    display: none!important;
+  }
+
+  .country-selector__list[data-v-46e105de] {
+    max-width: 60px!important;
+    min-width: 60px!important;
+    text-align: center;
+  }
+
+  .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
+    max-width: fit-content;
+    min-width: 40px;
+    display: flex;
+  }
+
+  .country-selector[data-v-46e105de] {
+    height: 100%;
+  }
+
+  .vue-recycle-scroller .ready .direction-vertical {
+    max-width: 60px!important;
+  }
+
+  .input-tel__input[data-v-e59be3b4] {
+    z-index: 100!important;
+  }
+
+  #MazPhoneNumberInput-35_phone_number {
+    background: transparent;
+    border-radius: 100px;
+    border: none!important;
+    box-shadow: none!important;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+    height: 59px;
+    margin-top: 0!important;
+    caret-color: #EEEEEE!important;
+    -webkit-user-select: auto!important;
+    user-select: auto!important;
+    padding: 4px 0 5px;
+  }
+
+  .input-tel[data-v-e59be3b4] {
+    height: 100%;
+  }
+
+
+  .country-selector__toggle[data-v-46e105de] {
+    right: 45px;
+    top: calc(50% - 11px);
+  }
+
+  .country-selector__country-flag[data-v-46e105de] {
+    left: 4px!important;
+    top: 22px;
+  }
+  .country-selector.has-hint .country-selector__input[data-v-46e105de], .country-selector.has-value .country-selector__input[data-v-46e105de] {
+    padding: 0;
+  }
+
+  #MazPhoneNumberInput-35_country_selector {
+    border: none!important;
+    font-size: 14px;
+    font-family: Open Sans;
+    margin-top: 9px;
+  }
+
+  #MazPhoneNumberInput-35_country_selector:focus {
+    border: none!important;
+    box-shadow: none!important;
+  }
+
+  .input-tel__label[data-v-e59be3b4] {
+    display: none;
+  }
+
+  .country-selector__label {
+    display: none;
+  }
+
 </style>
 <script>
+  import Vue from 'vue'
+  import VuePhoneNumberInput from 'vue-phone-number-input';
+  import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+  Vue.component('vue-phone-number-input', VuePhoneNumberInput);
+
   export default {
   props: ['thousands', 'hundreds', 'tens', 'units'],
+
+    data() {
+      return {
+        phoneNum: ''
+      }
+    },
   }
 </script>
