@@ -784,6 +784,14 @@
     margin-left: 50px;
   }
 
+  #MazPhoneNumberInput-33_country_selector {
+    width: 40px;
+    background: transparent;
+    color: #eaeaea;
+    border: none!important;
+    margin-left: 50px;
+  }
+
   .dots-text {
     display: none!important;
   }
@@ -828,6 +836,22 @@
     user-select: auto!important;
     padding: 4px 0 5px;
   }
+#MazPhoneNumberInput-33_phone_number {
+    background: transparent;
+    border-radius: 100px;
+    border: none!important;
+    box-shadow: none!important;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+    height: 59px;
+    margin-top: 0!important;
+    caret-color: #EEEEEE!important;
+    -webkit-user-select: auto!important;
+    user-select: auto!important;
+    padding: 4px 0 5px;
+  }
 
   .input-tel[data-v-e59be3b4] {
     height: 100%;
@@ -854,7 +878,19 @@
     margin-top: 9px;
   }
 
+  #MazPhoneNumberInput-33_country_selector {
+    border: none!important;
+    font-size: 14px;
+    font-family: Open Sans;
+    margin-top: 9px;
+  }
+
   #MazPhoneNumberInput-35_country_selector:focus {
+    border: none!important;
+    box-shadow: none!important;
+  }
+
+  #MazPhoneNumberInput-33_country_selector:focus {
     border: none!important;
     box-shadow: none!important;
   }
