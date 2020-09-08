@@ -464,16 +464,17 @@
   }
 
   .main-longway h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto;
     font-style: normal;
     font-weight: 900;
     font-size: 25px;
     text-align: center;
-    color: #FFFFFF;
-    max-width: 550px;
+    color: #fff;
+    width: 100%;
     margin: 29px auto 38px;
     line-height: 33px;
     padding: 0 15px;
+    height: 66px;
   }
 
   .main-longway_video {
