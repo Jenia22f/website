@@ -186,7 +186,7 @@
     font-weight: 900;
     font-size: 40px;
     color: #333333;
-    width: 407px;
+    width: 435px;
   }
 
   .first-result_week-result h3 span {

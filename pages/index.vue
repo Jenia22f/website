@@ -42,7 +42,7 @@
       // }
       return {
         count: '',
-        thousands: 5,
+        thousands: 1,
         hundreds: 1,
         tens: 6,
         units: 8

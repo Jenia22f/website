@@ -306,43 +306,151 @@
 
 </template>
 
-<script>
-  import Vue from 'vue'
-  import VuePhoneNumberInput from 'vue-phone-number-input';
-  import 'vue-phone-number-input/dist/vue-phone-number-input.css';
-  Vue.component('vue-phone-number-input', VuePhoneNumberInput);
-
-  import Form from "./Form";
-  export default {
-
-    data() {
-      return {
-        phone: ''
-      }
-    },
-    components: {Form},
-    props: ['count'],
-    link: [
-      // {rel: 'stylesheet', href: '~@/css/intlTelInput.scss'},
-      {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.css'},
-    ],
-    script: [
-      // {src: '~@/js/intlTelInput.js'},
-      {src: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.js'},
-    ],
-    methods: {
-    },
-
-    mounted() {
-    },
-
-    created() {
-    }
-  }
-</script>
 
 
 <style>
+
+  #MazPhoneNumberInput {
+    width: 280px;
+    height: 59px;
+    background: rgba(160, 157, 163, 0.25);
+    border-radius: 100px;
+    margin-left: 55px;
+    margin-top: 14px;
+    padding-left: 36px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+  }
+
+  #MazPhoneNumberInput-23_country_selector {
+    width: 40px;
+    background: transparent;
+    color: #eaeaea;
+    border: none!important;
+  }
+
+  #MazPhoneNumberInput-21_country_selector {
+    width: 40px;
+    background: transparent;
+    color: #eaeaea;
+    border: none!important;
+  }
+
+  .dots-text {
+    /*display: none!important;*/
+  }
+
+  .country-selector__list[data-v-46e105de] {
+    max-width: 60px!important;
+    min-width: 60px!important;
+    text-align: center;
+  }
+
+  .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
+    max-width: fit-content;
+    min-width: 40px;
+    display: flex;
+  }
+
+  .country-selector[data-v-46e105de] {
+    height: 100%;
+  }
+
+  .vue-recycle-scroller .ready .direction-vertical {
+    max-width: 60px!important;
+  }
+
+  .input-tel__input[data-v-e59be3b4] {
+    z-index: 100!important;
+  }
+
+  #MazPhoneNumberInput-23_phone_number {
+    background: transparent;
+    border-radius: 100px;
+    border: none!important;
+    box-shadow: none!important;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+    height: 59px;
+    margin-top: 0!important;
+    caret-color: #EEEEEE!important;
+    -webkit-user-select: auto!important;
+    user-select: auto!important;
+    padding: 4px 0 5px;
+  }
+
+  #MazPhoneNumberInput-21_phone_number {
+    background: transparent;
+    border-radius: 100px;
+    border: none!important;
+    box-shadow: none!important;
+    font-size: 14px;
+    outline: none;
+    color: #eaeaea;
+    font-family: 'Open Sans';
+    height: 59px;
+    margin-top: 0!important;
+    caret-color: #EEEEEE!important;
+    -webkit-user-select: auto!important;
+    user-select: auto!important;
+    padding: 4px 0 5px;
+  }
+
+  .input-tel[data-v-e59be3b4] {
+    height: 100%;
+  }
+
+
+  .country-selector__toggle[data-v-46e105de] {
+    right: 45px;
+    top: calc(50% - 11px);
+  }
+
+  .country-selector__country-flag[data-v-46e105de] {
+    left: 4px!important;
+    top: 22px;
+  }
+  .country-selector.has-hint .country-selector__input[data-v-46e105de], .country-selector.has-value .country-selector__input[data-v-46e105de] {
+    padding: 0;
+  }
+
+  #MazPhoneNumberInput-23_country_selector {
+    border: none!important;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-family: Open Sans;
+  }
+
+  #MazPhoneNumberInput-23_country_selector:focus {
+    border: none!important;
+    box-shadow: none!important;
+  }
+
+  #MazPhoneNumberInput-21_country_selector {
+    border: none!important;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-family: Open Sans;
+  }
+
+  #MazPhoneNumberInput-21_country_selector:focus {
+    border: none!important;
+    box-shadow: none!important;
+  }
+
+  .input-tel__label[data-v-e59be3b4] {
+    display: none;
+  }
+
+  .country-selector__label {
+    display: none;
+  }
+
 
   .main {
     background: url('~@/assets/imgs/Rectangle21.png');
@@ -740,145 +848,39 @@
     transition-property: opacity;
   }
 
-  #MazPhoneNumberInput {
-    width: 280px;
-    height: 59px;
-    background: rgba(160, 157, 163, 0.25);
-    border-radius: 100px;
-    margin-left: 55px;
-    margin-top: 14px;
-    padding-left: 36px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-  }
-
-  #MazPhoneNumberInput-23_country_selector {
-    width: 40px;
-    background: transparent;
-    color: #eaeaea;
-    border: none!important;
-  }
-
-  #MazPhoneNumberInput-21_country_selector {
-    width: 40px;
-    background: transparent;
-    color: #eaeaea;
-    border: none!important;
-  }
-
-  .dots-text {
-    /*display: none!important;*/
-  }
-
-  .country-selector__list[data-v-46e105de] {
-    max-width: 60px!important;
-    min-width: 60px!important;
-    text-align: center;
-  }
-
-  .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
-    max-width: fit-content;
-    min-width: 40px;
-    display: flex;
-  }
-
-  .country-selector[data-v-46e105de] {
-    height: 100%;
-  }
-
-  .vue-recycle-scroller .ready .direction-vertical {
-    max-width: 60px!important;
-  }
-
-  .input-tel__input[data-v-e59be3b4] {
-    z-index: 100!important;
-  }
-
-  #MazPhoneNumberInput-23_phone_number {
-    background: transparent;
-    border-radius: 100px;
-    border: none!important;
-    box-shadow: none!important;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-    height: 59px;
-    margin-top: 0!important;
-    caret-color: #EEEEEE!important;
-    -webkit-user-select: auto!important;
-    user-select: auto!important;
-    padding: 4px 0 5px;
-  }
-
-  #MazPhoneNumberInput-21_phone_number {
-    background: transparent;
-    border-radius: 100px;
-    border: none!important;
-    box-shadow: none!important;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-    height: 59px;
-    margin-top: 0!important;
-    caret-color: #EEEEEE!important;
-    -webkit-user-select: auto!important;
-    user-select: auto!important;
-    padding: 4px 0 5px;
-  }
-
-  .input-tel[data-v-e59be3b4] {
-    height: 100%;
-  }
-
-
-  .country-selector__toggle[data-v-46e105de] {
-    right: 45px;
-    top: calc(50% - 11px);
-  }
-
-  .country-selector__country-flag[data-v-46e105de] {
-    left: 4px!important;
-    top: 22px;
-  }
-  .country-selector.has-hint .country-selector__input[data-v-46e105de], .country-selector.has-value .country-selector__input[data-v-46e105de] {
-    padding: 0;
-  }
-
-  #MazPhoneNumberInput-23_country_selector {
-    border: none!important;
-    padding-bottom: 10px;
-    font-size: 14px;
-    font-family: Open Sans;
-  }
-
-  #MazPhoneNumberInput-23_country_selector:focus {
-    border: none!important;
-    box-shadow: none!important;
-  }
-
-  #MazPhoneNumberInput-21_country_selector {
-    border: none!important;
-    padding-bottom: 10px;
-    font-size: 14px;
-    font-family: Open Sans;
-  }
-
-  #MazPhoneNumberInput-21_country_selector:focus {
-    border: none!important;
-    box-shadow: none!important;
-  }
-
-  .input-tel__label[data-v-e59be3b4] {
-    display: none;
-  }
-
-  .country-selector__label {
-    display: none;
-  }
-
 </style>
+
+<script>
+  import Vue from 'vue'
+  import VuePhoneNumberInput from 'vue-phone-number-input';
+  import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+  Vue.component('vue-phone-number-input', VuePhoneNumberInput);
+
+  import Form from "./Form";
+  export default {
+
+    data() {
+      return {
+        phone: ''
+      }
+    },
+    components: {Form},
+    props: ['count'],
+    link: [
+      // {rel: 'stylesheet', href: '~@/css/intlTelInput.scss'},
+      {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.css'},
+    ],
+    script: [
+      // {src: '~@/js/intlTelInput.js'},
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.js'},
+    ],
+    methods: {
+    },
+
+    mounted() {
+    },
+
+    created() {
+    }
+  }
+</script>

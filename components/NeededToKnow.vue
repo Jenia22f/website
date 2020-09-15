@@ -77,7 +77,7 @@
     line-height: 69px;
     color: #DEDEDE;
     text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.54);
-    width: 223px;
+    width: 235px;
     margin: 86px 128px 0 0;
     font-style: normal;
   }
