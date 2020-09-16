@@ -51,7 +51,7 @@
 
     created() {
       if (process.client) {
-            this.count = localStorage.getItem('registr') ? +localStorage.getItem('registr') : 5168
+            this.count = localStorage.getItem('registr') ? +localStorage.getItem('registr') : 1168
       }
 
     },
