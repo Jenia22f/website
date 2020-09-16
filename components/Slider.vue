@@ -415,7 +415,7 @@
     }
 
     .slider_why-slider {
-      margin: 0 auto;
+      margin: 10px auto;
       width: 100%;
       display: block;
     }
