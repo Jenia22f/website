@@ -508,9 +508,13 @@
 
 
       onPlayVideo(id, btn, frame) {
-        document.querySelector(`#${id}`).classList.toggle('unvisVideo')
-        document.querySelector(`#${btn}`).classList.toggle('invis')
-        document.querySelector(`#${frame}`).classList.toggle('dnone')
+        if (document.querySelector(`#${id}`) && document.querySelector(`#${btn}`) && document.querySelector(`#${frame}`)) {
+          document.querySelector(`#${id}`).classList.toggle('unvisVideo')
+          document.querySelector(`#${btn}`).classList.toggle('invis')
+          document.querySelector(`#${frame}`).classList.toggle('dnone')
+        } else {
+          return
+        }
       }
     }
   }
