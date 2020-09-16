@@ -823,7 +823,9 @@
     transition-duration: .6s;
     transition-property: opacity;
   }
-
+  #myCarousels .carousel-inner .item {
+    height: fit-content!important;
+  }
 </style>
 
 <script>
