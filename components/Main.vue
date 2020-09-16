@@ -712,6 +712,9 @@
     #MazPhoneNumberInput-23_country_selector {
       margin-left: 35px;
     }
+    #MazPhoneNumberInput-21_country_selector {
+      margin-left: 35px;
+    }
 
     .main_linaer .container {
       flex-direction: column;
