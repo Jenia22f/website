@@ -84,7 +84,9 @@
       </div>
 
       <div class="main-logins">
-        <div class="main-logins_logo"></div>
+        <div class="main-logins_logo">
+          <img src="~@/assets/imgs/logo.svg" alt="logo">
+        </div>
         <div id="myCarousels" class="carousel slide" data-ride="carousel" data-interval="5500">
           <div class="carousel-inner">
             <div class="item active">
@@ -764,9 +766,9 @@
     }
 
     .main-logins_logo {
-      width: 60px;
-      height: 60px;
-      background: #C4C4C4;
+      width: 80px;
+      height: 80px;
+      /*background: #C4C4C4;*/
       border-radius: 46px;
       margin-left: 15px;
     }
@@ -845,6 +847,10 @@
   }
   #myCarousels .carousel-inner .item {
     height: fit-content!important;
+  }
+
+  #myCarousels {
+    margin-top: 15px;
   }
 </style>
 
