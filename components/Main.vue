@@ -343,20 +343,20 @@
   }
 
   #MazPhoneNumberInput-23_phone_number {
-    background: transparent;
-    border-radius: 100px;
+    background: transparent !important;
+    border-radius: 100px!important;
     border: none!important;
     box-shadow: none!important;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-    height: 59px;
+    font-size: 14px!important;
+    outline: none!important;
+    color: #eaeaea!important;
+    font-family: 'Open Sans' !important;
+    height: 59px!important;
     margin-top: 0!important;
     caret-color: #EEEEEE!important;
     -webkit-user-select: auto!important;
     user-select: auto!important;
-    padding: 4px 0 5px;
+    padding: 4px 0 5px!important;
   }
 
   #MazPhoneNumberInput-21_phone_number {
@@ -706,6 +706,11 @@
   }
 
   @media only screen and (max-width: 861px) {
+
+    #MazPhoneNumberInput-23_country_selector {
+      margin-left: 35px;
+    }
+
     .main_linaer .container {
       flex-direction: column;
     }
@@ -723,6 +728,21 @@
 
     .main-longway h3 {
       display: none;
+    }
+
+    .main-registration_form input {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #MazPhoneNumberInput {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-registration_form .btn-consult {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .main {

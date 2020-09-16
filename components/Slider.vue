@@ -35,53 +35,53 @@
               </div>
               </div>
             </div>
-            <div class="item item-slider">
-              <div class="item-container d-flex">
-                <div class="item-img item-img_thirdslide"></div>
-                <div class="item_content">
-                  <div class="item_content-small-info d-flex">
-                    <img src="~@/assets/imgs/story/slide2/image(13).jpg" alt="">
-                    <div class="item_content-small-info_name">
-                      <p>Алина Колесникова </p>
-                      <span>Открыла занятия по Йоге</span>
-                    </div>
-                  </div>
-                  <h3 class="item_content-info_title"> Мой первый капитал для бизнеса</h3>
-                  <p class="item_content-info_text">Я, как и любая  уважающая  себя женщина,
-                    хотела больше уделять  внимания  себе,
-                    забыть что такое усталость и не приходить с работы с испорченным настроением.
-                    Зарплатой я бы не похвасталась, но ее вполне хватило,
-                    для того чтобы начать работать с этой компанией и получать результат.
-                    Спасибо вам, без вас мне было бы очень сложно!</p>
-                  <p class="item_content-info_time">Время сотрудничества <span> год</span></p>
-                </div>
-              </div>
-            </div>
+<!--            <div class="item item-slider">-->
+<!--              <div class="item-container d-flex">-->
+<!--                <div class="item-img item-img_thirdslide"></div>-->
+<!--                <div class="item_content">-->
+<!--                  <div class="item_content-small-info d-flex">-->
+<!--                    <img src="~@/assets/imgs/story/slide2/image(13).jpg" alt="">-->
+<!--                    <div class="item_content-small-info_name">-->
+<!--                      <p>Алина Колесникова </p>-->
+<!--                      <span>Открыла занятия по Йоге</span>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <h3 class="item_content-info_title"> Мой первый капитал для бизнеса</h3>-->
+<!--                  <p class="item_content-info_text">Я, как и любая  уважающая  себя женщина,-->
+<!--                    хотела больше уделять  внимания  себе,-->
+<!--                    забыть что такое усталость и не приходить с работы с испорченным настроением.-->
+<!--                    Зарплатой я бы не похвасталась, но ее вполне хватило,-->
+<!--                    для того чтобы начать работать с этой компанией и получать результат.-->
+<!--                    Спасибо вам, без вас мне было бы очень сложно!</p>-->
+<!--                  <p class="item_content-info_time">Время сотрудничества <span> год</span></p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
-            <div class="item item-slider">
-              <div class="item-container d-flex">
-              <div class="item-img item-img_secondslide"></div>
-              <div class="item_content">
-                <div class="item_content-small-info d-flex">
-                  <img src="~@/assets/imgs/story/slide1/icon.jpg" alt="">
-                  <div class="item_content-small-info_name">
-                    <p>Никита Алексеев</p>
-                    <span></span>
-                  </div>
-                </div>
-                <h3 class="item_content-info_title"></h3>
-                <p class="item_content-info_text">Все оказалось намного проще чем оно есть.
-                  Наверное это потому, что мы привыкли усложнять,
-                  а потом жаловаться что все дается с трудом.
-                  Все проблемы в нашей голове. Мы много чего упускаем, а потом оправдываемся.
-                  Мне выпал шанс, и я им воспользовался. И сегодня я могу позволить себе то,
-                  в чем пару лет назад себе отказывал.
-                  Мое почтение этой компании,
-                  так как вы делаете людей по-настоящему счастливее! </p>
-                <p class="item_content-info_time">Время сотрудничества <span>2 года</span></p>
-              </div>
-              </div>
-            </div>
+<!--            <div class="item item-slider">-->
+<!--              <div class="item-container d-flex">-->
+<!--              <div class="item-img item-img_secondslide"></div>-->
+<!--              <div class="item_content">-->
+<!--                <div class="item_content-small-info d-flex">-->
+<!--                  <img src="~@/assets/imgs/story/slide1/icon.jpg" alt="">-->
+<!--                  <div class="item_content-small-info_name">-->
+<!--                    <p>Никита Алексеев</p>-->
+<!--                    <span></span>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <h3 class="item_content-info_title"></h3>-->
+<!--                <p class="item_content-info_text">Все оказалось намного проще чем оно есть.-->
+<!--                  Наверное это потому, что мы привыкли усложнять,-->
+<!--                  а потом жаловаться что все дается с трудом.-->
+<!--                  Все проблемы в нашей голове. Мы много чего упускаем, а потом оправдываемся.-->
+<!--                  Мне выпал шанс, и я им воспользовался. И сегодня я могу позволить себе то,-->
+<!--                  в чем пару лет назад себе отказывал.-->
+<!--                  Мое почтение этой компании,-->
+<!--                  так как вы делаете людей по-настоящему счастливее! </p>-->
+<!--                <p class="item_content-info_time">Время сотрудничества <span>2 года</span></p>-->
+<!--              </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
           </div>
           <!-- Left and right controls -->
@@ -430,7 +430,8 @@
     }
 
     .item_content-small-info {
-      max-width: 380px;
+      max-width: 90%;
+      width: 90%;
       margin: 0 auto;
       bottom: 120px;
       right: 0;
@@ -445,10 +446,11 @@
     }
 
     .item-img {
-      height: 100%;
-      min-height: 700px;
+      min-height: 400px;
+      max-height: 400px;
       width: 100%;
       background-size: cover;
+
     }
 
     .active {
@@ -456,14 +458,24 @@
       height: 100%;
     }
 
+    #myCarousel .item {
+      height: 800px!important;
+    }
+
+    .item_content-info_text {
+      margin-left: 11px;
+    }
+
     .item_content-info_title {
-      margin-top: 0;
+      margin: 0 0 0 11px;
+      font-size: 26px;
     }
 
     .item_content-info_time {
       border-left: 4px solid #626262;
       padding-left: 16px;
-      margin-left: 42px;
+      margin-left: 11px;
+      margin-top: 45px;
     }
 
   }

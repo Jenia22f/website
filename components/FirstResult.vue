@@ -793,11 +793,23 @@
     .qis-slidercenter, .qis-sliderleft, .qis-sliderright{
       font-size: 14px;
     }
+
+    .final_total {
+      width: 148px;
+      height: 53px;
+      margin-top: 6px;
+      font-size: 28px!important;
+      padding: 8px 20px 0 15px;
+    }
   }
 
   @media only screen and (max-width: 400px) {
     .first-result_week-result_steps-onestep_info {
       max-width: 200px;
+    }
+
+    .el-region-calc {
+      padding-top: 0;
     }
 
     .first-result_week-result h3 {

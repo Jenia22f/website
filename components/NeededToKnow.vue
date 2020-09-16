@@ -286,15 +286,16 @@
     }
 
     .neededToKnow_with-girl_whatToKnow-consult-btn {
-      top: 880px;
+      top: 950px;
     }
 
     .free-cons {
-      top: 890px
+      top: 950px
     }
 
     .main-registration_count {
       flex-direction: row-reverse;
+      padding: 0 2px;
     }
 
     .main-registration {
@@ -302,6 +303,11 @@
     }
 
     .main-registration_form input {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #MazPhoneNumberInput {
       margin-left: auto;
       margin-right: auto;
     }
