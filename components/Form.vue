@@ -33,6 +33,8 @@
                 <div class="form-registration_form-number-today_num">{{hundreds}}</div>
                 <div class="form-registration_form-number-today_num">{{tens}}</div>
                 <div class="form-registration_form-number-today_num">{{units}}</div>
+                <div class="form-registration_form-number-today_num d-none" id="countTens">{{countTens}}</div>
+                <div class="form-registration_form-number-today_num d-none" id="countUnit">{{countUnit}}</div>
               </div>
               <p class="form-registration_form-number-today_p">Зарегистрировались сегодня</p>
               <div class="form-registration_form-fields" action="#">
@@ -911,12 +913,17 @@
   Vue.component('vue-phone-number-input', VuePhoneNumberInput);
 
   export default {
-  props: ['thousands', 'hundreds', 'tens', 'units'],
+  props: ['thousands', 'hundreds', 'tens', 'units', 'count', 'countTens', 'countUnit', 'count'],
 
     data() {
       return {
-        phoneNum: ''
+        phoneNum: '',
       }
     },
+
+    mounted() {
+      if (String(this.count).length >= 5) document.querySelector('#countTens').classList.remove('d-none')
+      if (String(this.count).length >= 6) document.querySelector('#countUnit').classList.remove('d-none')
+    }
   }
 </script>

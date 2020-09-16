@@ -16,7 +16,7 @@
     <NeededToKnow/>
     <FirstResult/>
     <Reviews/>
-    <Form :thousands="thousands" :hundreds="hundreds" :tens="tens" :units="units"/>
+    <Form :thousands="thousands" :hundreds="hundreds" :tens="tens" :units="units":countTens="countTens" :countUnit="countUnit" :count="count" />
   </div>
 </template>
 <script>
@@ -48,7 +48,9 @@
         thousands: 1,
         hundreds: 1,
         tens: 6,
-        units: 8
+        units: 8,
+        countTens: '',
+        countUnit: ''
       }
     },
 
@@ -71,7 +73,8 @@
               this.hundreds = String(this.count).split('')[1]
               this.tens = String(this.count).split('')[2]
               this.units = String(this.count).split('')[3]
-
+              if (String(this.count).length >= 5) this.countTens = String(this.count).split('')[4]
+              if (String(this.count).length >= 6) this.countUnit = String(this.count).split('')[4]
             }, (Math.floor(Math.random() * Math.floor(5)) * 1000));
           }
 
