@@ -516,6 +516,10 @@
     cursor: pointer;
   }
 
+  .main-reviews_video-btn:hover {
+    background: #7C7C7C;
+  }
+
   .main-reviews_video-btn i {
     padding-left: 25px;
     padding-right: 10px;
