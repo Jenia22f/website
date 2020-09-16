@@ -2,31 +2,6 @@
   <div class="main">
     <div class="main_linaer">
     <div class="container d-flex justify-content-around">
-<!--    <div class="main-reviews">-->
-<!--      <div class="main-reviews_user-data d-flex">-->
-<!--        <div class="main-reviews_user-data_logo">-->
-<!--          <img src="~@/assets/imgs/ellipse2.png" alt="">-->
-<!--        </div>-->
-<!--        <div class="main-reviews_user-data_name">-->
-<!--          <p>-->
-<!--            Алексей-->
-<!--          </p>-->
-<!--          <span>-->
-<!--              5 дней назад-->
-<!--          </span>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="main-reviews_user-text">-->
-<!--        <p>-->
-<!--          Начал работать с компанией две недели назад и результат не заставил себя ждать.-->
-<!--          Сегодня вывел свои первые средства, и решил написать отзыв,-->
-<!--          что все честно и без каких либо проблем.</p>-->
-<!--      </div>-->
-<!--      <div class="main-reviews_video-btn">-->
-<!--        <i class="fas fa-play"></i> видео отзыв-->
-<!--      </div>-->
-<!--      <p class="main-reviews_all">Все Отзывы</p>-->
-<!--    </div>-->
       <div class="main-reviews">
       <div id="myCarousel2" class="carousel slide carousel-fade"  data-ride="carousel" data-interval="5000" data-pause="hover">
         <div class="carousel-inner">
@@ -61,7 +36,7 @@
                 </div>
                 <div class="main-reviews_user-data_name">
                   <p>
-                    Алексей
+                    Оксана
                   </p>
                   <span>
               5 дней назад
@@ -85,7 +60,7 @@
                 </div>
                 <div class="main-reviews_user-data_name">
                   <p>
-                    Алексей
+                    Ольга
                   </p>
                   <span>
               5 дней назад
@@ -552,6 +527,7 @@
     font-family: 'Open sans';
     border-bottom: 1px solid;
     width: fit-content;
+    cursor: pointer;
   }
 
   .item-review {
@@ -578,7 +554,7 @@
     font-size: 25px;
     text-align: center;
     color: #fff;
-    width: 100%;
+    width: 550px;
     margin: 29px auto 38px;
     line-height: 33px;
     padding: 0 15px;

@@ -200,7 +200,7 @@
     width: 292px;
     height: 77px;
     border-radius: 10px;
-    padding: 10px 15px 7px;
+    padding: 10px 5px 7px 15px;
   }
 
   .nav>li>a img {
@@ -217,6 +217,7 @@
     color: #333333;
     text-decoration: none;
     margin-bottom: 0;
+    line-height: 21px;
   }
 
   .user-data span {

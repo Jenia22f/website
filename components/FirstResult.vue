@@ -149,7 +149,7 @@
     font-weight: 900;
     font-size: 50px;
     color: #000000;
-    width: 184px;
+    width: 215px;
     font-family: Roboto;
     position: relative;
     z-index: 1;
@@ -177,7 +177,7 @@
 
   .first-result_week-result {
     margin-top: 256px;
-    margin-left: 170px;
+    margin-left: 140px;
     width: 600px;
   }
 
@@ -847,9 +847,9 @@
 
     mounted() {
       var target = $('.count');
-      var targetPos = target.offset().top + 100;
+      var targetPos = target.offset().top;
       var winHeight = $(window).height();
-      var scrollToElem = targetPos - winHeight;
+      var scrollToElem = 6.7 * targetPos ;
       $(window).scroll(function(){
         var winScrollTop = $(this).scrollTop();
         if(winScrollTop > scrollToElem){
@@ -869,7 +869,22 @@
             duration: 4000,
             easing: 'swing',
             step: function (now) {
-              if ($(this).text(Math.ceil(+now)) === counter) return
+              if ($(this).text(Math.ceil(+now)) === counter) {
+                return
+              } else {
+              let a = Math.ceil(now).toString().split('')
+              if (a.length > 3) {
+                if (a.length === 4) {
+                  a.splice(1, 0, " ");
+                } else if (a.length === 5) {
+                  a.splice(2, 0, " ");
+                }
+                else if(a.length === 6) {
+                  a.splice(3, 0, " ");
+                }
+                $(this).text(a.join(''))
+              }
+              }
             }
           });
         })

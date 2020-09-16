@@ -136,6 +136,8 @@
                 localStorage.setItem('minutesCount', this.minutesCount)
               } else {
                 this.timerCount = 0;
+                this.minutesCount = 0;
+                this.hourCount = 0;
               }
             }
           }
