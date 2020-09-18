@@ -424,6 +424,10 @@
       width: 100%;
     }
 
+    .item_content-info_text {
+      max-width: 90%;
+    }
+
     .item-container {
       flex-direction: column;
       height: 100%;
