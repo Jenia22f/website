@@ -5,7 +5,7 @@
       <p class="reviews-consultation-title">УЖЕ БОЛЕЕ 50 000 ТИСЯЧ ЛЮДЕЙ СТАЛИ НАШИМИ УСПЕШНЫМИ КЛИЕНТАМИ</p>
       <h3>ОТЗЫВЫ ПРО ПЕРВЫЙ ШАГ</h3>
       <div @click='scrollToTop()' class="reviews-consultation_btn d-flex">
-        <p>КОНСУЛЬТАЦИЯ</p> <i class="fas fa-long-arrow-alt-right"></i>
+        <p>КОНСУЛЬТАЦИЯ</p> <span class="material-icons  keyboard">keyboard_backspace</span>
       </div>
       </div>
     </div>
@@ -156,7 +156,7 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
   }
 
-  .reviews-consultation_btn:hover  .fa-long-arrow-alt-right {
+  .reviews-consultation_btn:hover  .keyboard {
     animation-name: arrow;
     animation-duration: .6s;
     position: relative;
@@ -173,14 +173,7 @@
     font-size: 14px;
     letter-spacing: 0.13em;
     color: #000000;
-    padding: 0 0 18px 23px;;
-  }
-
-  .fa-long-arrow-alt-right {
-    font-size: 20px;
-    letter-spacing: 0.13em;
-    color: #000000;
-    padding-left: 18px;
+    padding: 0 22px 18px 23px;;
   }
 
   .reviews-list {

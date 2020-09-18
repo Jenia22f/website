@@ -6,7 +6,7 @@
         <div class="neededToKnow_with-girl_whatToKnow_div">
         <h3>ЧТО ВАМ НУЖНО ЗНАТЬ</h3>
         <div @click='scrollToTop()' class="neededToKnow_with-girl_whatToKnow-consult-btn d-flex">
-          <p>КОНСУЛЬТАЦИЯ</p> <i class="fas fa-long-arrow-alt-right"></i>
+          <p>КОНСУЛЬТАЦИЯ</p><span class="material-icons keyboard">keyboard_backspace</span>
         </div>
           <p class="free-cons">*консультация бесплатна</p>
         </div>
@@ -97,7 +97,7 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
   }
 
-  .neededToKnow_with-girl_whatToKnow-consult-btn:hover  .fa-long-arrow-alt-right {
+  .neededToKnow_with-girl_whatToKnow-consult-btn:hover  .keyboard {
     animation-name: arrow;
     animation-duration: .6s;
     position: relative;
@@ -114,13 +114,15 @@
     color: #000000;
     font-weight: normal;
     font-size: 14px;
-    padding: 20px 7px 18px 23px;
+    padding: 20px 25px 18px 23px;
     letter-spacing: 0.13em;
   }
 
-  .neededToKnow_with-girl_whatToKnow-consult-btn i {
+  .keyboard {
     font-size: 20px!important;
-    margin: 20px 14px 0 0;
+    margin: 0 0 17px 0;
+    transform: rotate(180deg);
+    color: #000000;
   }
 
   .neededToKnow_opportunities {

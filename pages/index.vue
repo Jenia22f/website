@@ -50,7 +50,8 @@
         tens: 6,
         units: 8,
         countTens: '',
-        countUnit: ''
+        countUnit: '',
+        timer: 0
       }
     },
 
@@ -66,7 +67,17 @@
       count: {
         handler(value) {
           if (value > 0) {
+            if (this.timer >= 3600) {
+              localStorage.removeItem('calcTimer');
+              localStorage.removeItem('registr');
+                this.count = 1168;
+                this.timer = 0
+            }
             setTimeout(() => {
+              this.timer++
+            }, 1000)
+            setTimeout(() => {
+              if (process.client) localStorage.setItem('calcTimer', this.timer)
               this.count = this.count + Math.floor(Math.random() * Math.floor(90));
               if (process.client) localStorage.setItem('registr', this.count)
               this.thousands = String(this.count).split('')[0]

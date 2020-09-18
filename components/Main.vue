@@ -78,7 +78,7 @@
                 <i class="fas fa-play"></i> видео отзыв
               </div>
           </div>
-          <p class="main-reviews_all">Все Отзывы</p>
+          <p class="main-reviews_all" @click='scrollToRev()'>Все Отзывы</p>
         </div>
       </div>
       </div>
@@ -886,12 +886,14 @@
       {src: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.js'},
     ],
     methods: {
+      scrollToRev() {
+        window.scroll({
+          top: document.querySelector('.reviews').offsetTop - 200,
+          left: 0,
+          behavior: 'smooth'
+        })
+      }
     },
 
-    mounted() {
-    },
-
-    created() {
-    }
   }
 </script>

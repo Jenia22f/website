@@ -309,7 +309,7 @@
   .form-container {
     height: fit-content;
     background-image: url("~@/assets/imgs/rectangle78.png");
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     /*background-image: url(""), no-repeat, center;*/
     border-radius: 56px;
@@ -488,17 +488,19 @@
     position: absolute;
     left: 874px;
     top: 40px;
-    max-height: 500px;
+    max-height: 501px;
     overflow: hidden;
+    width: 360px;
   }
 
   .visa-card {
     min-width: 340px;
+    max-width: 340px;
     height: 154px;
     background: #030016;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.24);
     border-radius: 10px;
-    margin-bottom: 13px;
+    margin: 0 auto 13px;
     position: relative;
     animation: move 30s ease-in-out;
     bottom: 0;
@@ -670,11 +672,9 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 14px;
-    margin: 20px auto 5px;
+    margin: 20px auto 28px;
     color: #9E9E9E;
     max-width: 754px;
-    position: relative;
-    bottom: 15px;
     max-width: 620px;
   }
 
@@ -685,8 +685,6 @@
     margin: 20px auto 5px;
     color: #9E9E9E;
     max-width: 754px;
-    position: relative;
-    bottom: 15px;
     max-width: 620px;
   }
 

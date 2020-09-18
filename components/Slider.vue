@@ -236,7 +236,7 @@
     background: rgba(5, 1, 29, 0.24) !important;
     border-radius: 50%;
     position: absolute;
-    top: 190px;
+    top: 200px;
   }
 
   .carousel-control:hover {
@@ -521,7 +521,7 @@
 
   .carousel-inner-rev {
     background: linear-gradient(94.49deg, #02001B 3.09%, #5B0563 132.69%);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.24);
+    /*box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.24);*/
     z-index: 1;
   }
 
@@ -537,6 +537,10 @@
   }
 
   .glyphicon-chevron-left img {
-    margin-left: -95px;
+    margin-left: -105px;
+  }
+
+  .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    top: 85px!important;
   }
 </style>

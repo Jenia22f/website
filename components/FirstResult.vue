@@ -109,7 +109,7 @@
                       </div>
                     </div>
                     <h3 class="individual" v-on:click="scrollToTop()">
-                      ИНДИВИДУАЛЬНЫЙ РАСЧЕТ  <i class="fas fa-long-arrow-alt-right"></i>
+                      ИНДИВИДУАЛЬНЫЙ РАСЧЕТ  <span class="material-icons  indiv">keyboard_backspace</span>
                     </h3>
                     <p class="individual_comment">Цифры представлены могут незначительно отличаться от итогового дохода.</p>
                   </form>
@@ -123,7 +123,7 @@
           <p class="el-region-calc_consultation-p">Консультация бесплатна*</p>
           <div @click='scrollToTop()' class="el-region-calc_consultation-btn d-flex">
             <p>КОНСУЛЬТАЦИЯ</p>
-            <i class="fas fa-long-arrow-alt-right"></i>
+            <span class="material-icons keyboard">keyboard_backspace</span>
           </div>
         </div>
       </div>
@@ -364,6 +364,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
     font-size: 14px;
+    height: 21px;
     color: #D9D9D9;
     border-bottom: 1px solid #BCB3B3;
     padding-bottom: 7px;
@@ -373,10 +374,12 @@
     display: flex;
   }
 
-  .individual i {
+  .individual .indiv {
     font-size: 20px;
     color: #AFAFAF;
     margin-left: 12px;
+    transform: rotate(180deg);
+    padding-bottom: 16px;
   }
 
   .individual_comment {
@@ -468,7 +471,7 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.95);
   }
 
-  .el-region-calc_consultation-btn:hover  .fa-long-arrow-alt-right {
+  .el-region-calc_consultation-btn:hover  .keyboard {
     animation-name: arrow;
     animation-duration: .6s;
     position: relative;
@@ -480,8 +483,12 @@
     100% {left: 50px;}
   }
 
+  .indiv {
+
+  }
+
   .el-region-calc_consultation-btn p {
-    padding: 20px 0 18px 23px;
+    padding: 20px 22px 18px 23px;
     font-family: Roboto;
     font-weight: normal;
     font-size: 14px;
@@ -822,13 +829,18 @@
   progress {
     width: 100%;
     height: 11px;
-    background: #4b2d58;
+    background: #402d50;
     border-radius: 21px;
     position: relative;
     bottom: 11px;
     z-index: 0;
-    border: 0.1px solid rgba(196, 196, 196, 0.22);
+    color: #402d50;
+    border: 0.1px solid #402d50;
   }
+  progress::-webkit-progress-bar { background: #402d50; }
+  progress::-webkit-progress-inner-element { background: #402d50; }
+  progress::-moz-progress-bar { background: #402d50; }
+  progress::-webkit-progress-value { background: #402d50; }
 
   progress[value]::-webkit-progress-value {
     background: rgba(196, 196, 196, 0.63);
