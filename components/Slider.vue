@@ -86,10 +86,10 @@
           </div>
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"> <img src="~@/assets/imgs/keyboard_arrow_left.png" alt=""> </span>
+            <span class="material-icons arrow-keyboard arrow-keyboard_left">keyboard_arrow_left</span>
           </a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"> <img src="~@/assets/imgs/keyboard_arrow_left.png" alt="">  </span>
+            <span class="material-icons arrow-keyboard arrow-keyboard_right">keyboard_arrow_left</span>
           </a>
         </div>
     </div>
@@ -531,16 +531,19 @@
   /*  transition-property: opacity!important;*/
   /*}*/
 
-  .glyphicon-chevron-right img {
-    margin-left: 50px;
+  .arrow-keyboard {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+    color: rgba(6, 1, 29, 0.35);
+  }
+
+  .arrow-keyboard_right {
     transform: rotate(180deg);
+    margin: 69px 26px 70px 113px;
   }
 
-  .glyphicon-chevron-left img {
-    margin-left: -105px;
-  }
-
-  .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
-    top: 85px!important;
+  .arrow-keyboard_left {
+    margin: 69px 113px 70px 26px;
   }
 </style>

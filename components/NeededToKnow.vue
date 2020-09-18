@@ -120,7 +120,7 @@
 
   .keyboard {
     font-size: 20px!important;
-    margin: 0 0 17px 0;
+    margin: 0 0 18px 0;
     transform: rotate(180deg);
     color: #000000;
   }
