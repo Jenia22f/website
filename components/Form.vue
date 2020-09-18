@@ -478,6 +478,7 @@
     font-weight: normal;
     font-size: 12px;
     color: #BCBCBC;
+    cursor: pointer;
   }
 
   .form-registration_form-policy span {
