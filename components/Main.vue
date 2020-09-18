@@ -79,6 +79,10 @@
               </div>
           </div>
           <p class="main-reviews_all" @click='scrollToRev()'>Все Отзывы</p>
+          <div class="d-flex justify-content-end" style="position: relative; bottom: 42px">
+            <a href="#myCarousel2" data-slide="prev" class="rev-carousel_control"><span class="material-icons rev-arrow rev-arrow_left">keyboard_arrow_left</span></a>
+            <a href="#myCarousel2" data-slide="next" class="rev-carousel_control"><span class="material-icons rev-arrow rev-arrow_right">keyboard_arrow_left</span></a>
+          </div>
         </div>
       </div>
       </div>
@@ -858,6 +862,15 @@
 
   #myCarousels {
     margin-top: 15px;
+  }
+
+  .rev-arrow {
+    font-size: 50px;
+    color: #9B9B9B;
+  }
+
+  .rev-arrow_right {
+    transform: rotate(180deg);
   }
 </style>
 
