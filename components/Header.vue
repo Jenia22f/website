@@ -134,10 +134,13 @@
                 this.timerCount = 59;
                 localStorage.setItem('hourCount', this.hourCount)
                 localStorage.setItem('minutesCount', this.minutesCount)
-              } else {
-                this.timerCount = 0;
-                this.minutesCount = 0;
-                this.hourCount = 0;
+              } else if (this.timerCount === 0 && this.minutesCount === 0 && this.hourCount === 0) {
+                localStorage.removeItem('timerCount');
+                localStorage.removeItem('hourCount');
+                localStorage.removeItem('minutesCount');
+                this.timerCount = 18
+                this.minutesCount = 6
+                this.hourCount = 52
               }
             }
           }
