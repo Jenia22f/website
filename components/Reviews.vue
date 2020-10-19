@@ -294,6 +294,11 @@
     line-height: 15px;
     color: #7B7A7A;
   }
+  @media only screen and (min-width: 1200px) {
+    .reviews-list .container #nav {
+      margin-top: 90px;
+    }
+  }
 
   @media only screen and (max-width: 1270px) {
     .review-content_text {

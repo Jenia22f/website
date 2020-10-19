@@ -1,3 +1,5 @@
+import 'intl-tel-input/build/css/intlTelInput.css';
+
 <template>
   <div class="main">
     <div class="main_linaer">
@@ -241,9 +243,8 @@
         <div class="main-registration_form main_form d-flex flex-column" id="form" name="popform">
           <input type="text" placeholder="Ваше Имя">
           <input type="text" placeholder="Ваше email">
-          <form action="">
-            <vue-phone-number-input v-model="phone"   type="tel" fetch-country no-validator-state placeholder="+380 (96) 8798 685" ></vue-phone-number-input>
-          </form>
+          <vue-tel-input placeholder="+380 (96) 8798 685" v-model="value"></vue-tel-input>
+
           <a href="/registered" class="btn btn-consult" >Консультация</a>
           <a href="#" class="policy">Я ознакомлен с <span>политикой сайта</span></a>
         </div>
@@ -288,150 +289,30 @@
 </template>
 
 
-
 <style>
 
-  #MazPhoneNumberInput {
-    width: 280px;
-    height: 59px;
-    background: rgba(160, 157, 163, 0.25);
-    border-radius: 100px;
-    margin-left: 55px;
-    margin-top: 14px;
-    padding-left: 36px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-  }
-
-  #MazPhoneNumberInput-23_country_selector {
-    width: 40px;
-    background: transparent;
-    color: #eaeaea;
+  .vue-tel-input {
     border: none!important;
-  }
-
-  #MazPhoneNumberInput-21_country_selector {
-    width: 40px;
-    background: transparent;
-    color: #eaeaea;
-    border: none!important;
-  }
-
-  .dots-text {
-    /*display: none!important;*/
-  }
-
-  .country-selector__list[data-v-46e105de] {
-    max-width: 60px!important;
-    min-width: 60px!important;
-    text-align: center;
-  }
-
-  .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
-    max-width: fit-content;
-    min-width: 40px;
-    display: flex;
-  }
-
-  .country-selector[data-v-46e105de] {
-    height: 100%;
-  }
-
-  .vue-recycle-scroller .ready .direction-vertical {
-    max-width: 60px!important;
-  }
-
-  .input-tel__input[data-v-e59be3b4] {
-    z-index: 100!important;
-  }
-
-  #MazPhoneNumberInput-23_phone_number {
-    background: transparent !important;
-    border-radius: 100px!important;
-    border: none!important;
-    box-shadow: none!important;
-    font-size: 14px!important;
-    outline: none!important;
-    color: #eaeaea!important;
-    font-family: 'Open Sans' !important;
-    height: 59px!important;
-    margin-top: 0!important;
-    caret-color: #EEEEEE!important;
-    -webkit-user-select: auto!important;
-    user-select: auto!important;
-    padding: 4px 0 5px!important;
-  }
-
-  #MazPhoneNumberInput-21_phone_number {
-    background: transparent;
-    border-radius: 100px;
-    border: none!important;
-    box-shadow: none!important;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-    height: 59px;
-    margin-top: 0!important;
-    caret-color: #EEEEEE!important;
-    -webkit-user-select: auto!important;
-    user-select: auto!important;
-    padding: 4px 0 5px;
-  }
-
-  .input-tel[data-v-e59be3b4] {
-    height: 100%;
-  }
-
-
-  .country-selector__toggle[data-v-46e105de] {
-    right: 45px;
-    top: calc(50% - 11px);
-  }
-
-  .country-selector__country-flag[data-v-46e105de] {
-    left: 4px!important;
-    top: 22px;
-  }
-  .country-selector.has-hint .country-selector__input[data-v-46e105de], .country-selector.has-value .country-selector__input[data-v-46e105de] {
-    padding: 0;
-  }
-
-  #MazPhoneNumberInput-23_country_selector {
-    border: none!important;
-    padding-bottom: 10px;
-    font-size: 14px;
-    font-family: Open Sans;
-  }
-
-  #MazPhoneNumberInput-23_country_selector:focus {
-    border: none!important;
+    width: 318px;
+    margin-left: 20px;
     box-shadow: none!important;
   }
 
-  #MazPhoneNumberInput-21_country_selector {
+  .vue-tel-input input {
+    margin-left: 0!important;
+    width: 100% !important;
+    padding-left: 75px!important;
+  }
+
+  input:focus .vue-tel-input {
     border: none!important;
-    padding-bottom: 10px;
-    font-size: 14px;
-    font-family: Open Sans;
   }
 
-  #MazPhoneNumberInput-21_country_selector:focus {
-    border: none!important;
-    box-shadow: none!important;
+  .vti__dropdown {
+    padding: 0!important;
+    top: 7px;
+    left: 70px;
   }
-
-  .input-tel__label[data-v-e59be3b4] {
-    display: none;
-  }
-
-  .country-selector__label {
-    display: none;
-  }
-
 
   .main {
     background: url('~@/assets/imgs/Rectangle21.png');
@@ -703,6 +584,12 @@
     }
   }
 
+  @media only screen and (max-width: 1210px) {
+    .main-longway h3 {
+      width: fit-content;
+    }
+  }
+
   @media only screen and (max-width: 1199px) {
     .main-reviews {
       display: none;
@@ -875,20 +762,18 @@
 </style>
 
 <script>
-  import Vue from 'vue'
-  import VuePhoneNumberInput from 'vue-phone-number-input';
-  import 'vue-phone-number-input/dist/vue-phone-number-input.css';
-  Vue.component('vue-phone-number-input', VuePhoneNumberInput);
+
+  import { VueTelInput } from 'vue-tel-input'
 
   import Form from "./Form";
   export default {
 
     data() {
       return {
-        phone: ''
+        value: ''
       }
     },
-    components: {Form},
+    components: {Form, VueTelInput},
     props: ['count'],
     link: [
       // {rel: 'stylesheet', href: '~@/css/intlTelInput.scss'},

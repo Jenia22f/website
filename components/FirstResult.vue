@@ -76,7 +76,8 @@
                           </div>
                           <input type="range" class="range" name="loan-period" min="1" max="12" value="6"
                                  step="1" v-model="month" v-on:change="monthVal" v-on:input="monthVal">
-                          <progress id="monthProg"  min="1" max="12" value="6"></progress>
+                          <progress id="monthProg" min="0" max="11" value="5"
+                                    step="1"></progress>
                         </div>
                         <div class="range qis-slider-principal">
                           <div class="qis-slideroutput qis-loan">
@@ -925,7 +926,7 @@
         })
       },
       monthVal(event) {
-        document.querySelector('#monthProg').value = event.target.value
+        document.querySelector('#monthProg').value = event.target.value - 1
         this.calculateTotal()
       },
       moneyVal(event) {

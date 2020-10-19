@@ -40,14 +40,12 @@
               <div class="form-registration_form-fields" action="#">
                 <input type="text" placeholder="Ваше имя">
                 <input type="text" placeholder="Ваше email">
-                <form action="">
-                  <vue-phone-number-input v-model="phoneNum"   type="tel" fetch-country no-validator-state placeholder="+380 (96) 8798 685" ></vue-phone-number-input>
-                </form>
+                <vue-tel-input placeholder="+380 (96) 8798 685" v-model="value"></vue-tel-input>
               </div>
               <nuxt-link exact to="/registered">
               <button class="form-registration_form-btn" type="submit">НАЖМИ МЕНЯ</button>
               </nuxt-link>
-              <p class="form-registration_form-policy">Я ознакомлен с <span>политикой сайта</span></p>
+              <a class="form-registration_form-policy">Я ознакомлен с  <span>политикой сайта</span></a>
             </div>
             <div class="visa-container" id="visa-container">
               <div class="visa-card">
@@ -479,10 +477,13 @@
     font-size: 12px;
     color: #BCBCBC;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
   }
 
   .form-registration_form-policy span {
     color: royalblue;
+    margin-left: 4px;
   }
 
   .visa-container {
@@ -689,7 +690,13 @@
     max-width: 620px;
   }
 
-  @media only screen and (max-width: 1540px) {
+  @media only screen and (max-width: 1350px) {
+    .visa-container {
+      left: 820px;
+    }
+  }
+
+  @media only screen and (max-width: 1199px) {
     .visa-container {
       display: none;
     }
@@ -764,160 +771,42 @@
     margin: 14px 5px 8px 3px;
   }
 
-  .form-registration_form #MazPhoneNumberInput {
-    width: 280px;
-    height: 59px;
-    background: rgba(160, 157, 163, 0.25);
-    border-radius: 100px;
-    margin: 0 auto!important;
-    padding-left: 36px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-  }
-
-  #MazPhoneNumberInput-35_country_selector {
-    width: 40px;
-    background: transparent;
-    color: #eaeaea;
+  .form-registration_form-fields .vue-tel-input {
     border: none!important;
-    margin-left: 50px;
-  }
-
-  #MazPhoneNumberInput-33_country_selector {
-    width: 40px;
-    background: transparent;
-    color: #eaeaea;
-    border: none!important;
-    margin-left: 50px;
-  }
-
-  .dots-text {
-    display: none!important;
-  }
-
-  .country-selector__list[data-v-46e105de] {
-    max-width: 60px!important;
-    min-width: 60px!important;
-    text-align: center;
-  }
-
-  .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
-    max-width: fit-content;
-    min-width: 40px;
-    display: flex;
-  }
-
-  .country-selector[data-v-46e105de] {
-    height: 100%;
-  }
-
-  .vue-recycle-scroller .ready .direction-vertical {
-    max-width: 60px!important;
-  }
-
-  .input-tel__input[data-v-e59be3b4] {
-    z-index: 100!important;
-  }
-
-  #MazPhoneNumberInput-35_phone_number {
-    background: transparent;
-    border-radius: 100px;
-    border: none!important;
-    box-shadow: none!important;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-    height: 59px;
-    margin-top: 0!important;
-    caret-color: #EEEEEE!important;
-    -webkit-user-select: auto!important;
-    user-select: auto!important;
-    padding: 4px 0 5px;
-  }
-#MazPhoneNumberInput-33_phone_number {
-    background: transparent;
-    border-radius: 100px;
-    border: none!important;
-    box-shadow: none!important;
-    font-size: 14px;
-    outline: none;
-    color: #eaeaea;
-    font-family: 'Open Sans';
-    height: 59px;
-    margin-top: 0!important;
-    caret-color: #EEEEEE!important;
-    -webkit-user-select: auto!important;
-    user-select: auto!important;
-    padding: 4px 0 5px;
-  }
-
-  .input-tel[data-v-e59be3b4] {
-    height: 100%;
-  }
-
-
-  .country-selector__toggle[data-v-46e105de] {
-    right: 45px;
-    top: calc(50% - 11px);
-  }
-
-  .country-selector__country-flag[data-v-46e105de] {
-    left: 4px!important;
-    top: 22px;
-  }
-  .country-selector.has-hint .country-selector__input[data-v-46e105de], .country-selector.has-value .country-selector__input[data-v-46e105de] {
-    padding: 0;
-  }
-
-  #MazPhoneNumberInput-35_country_selector {
-    border: none!important;
-    font-size: 14px;
-    font-family: Open Sans;
-    margin-top: 9px;
-  }
-
-  #MazPhoneNumberInput-33_country_selector {
-    border: none!important;
-    font-size: 14px;
-    font-family: Open Sans;
-    margin-top: 9px;
-  }
-
-  #MazPhoneNumberInput-35_country_selector:focus {
-    border: none!important;
+    width: 318px;
+    margin-left: -15px;
     box-shadow: none!important;
   }
 
-  #MazPhoneNumberInput-33_country_selector:focus {
+  .form-registration_form-fields .vue-tel-input input {
+    margin-left: 0!important;
+    width: 100% !important;
+    padding-left: 75px!important;
+  }
+
+  .form-registration_form-fields input:focus .vue-tel-input {
     border: none!important;
-    box-shadow: none!important;
   }
 
-  .input-tel__label[data-v-e59be3b4] {
-    display: none;
-  }
-
-  .country-selector__label {
-    display: none;
+  .form-registration_form-fields .vti__dropdown {
+    padding: 0!important;
+    top: -6px;
+    left: 70px;
   }
 
 </style>
 <script>
-  import Vue from 'vue'
-  import VuePhoneNumberInput from 'vue-phone-number-input';
-  import 'vue-phone-number-input/dist/vue-phone-number-input.css';
-  Vue.component('vue-phone-number-input', VuePhoneNumberInput);
+  import { VueTelInput } from 'vue-tel-input'
+
 
   export default {
-  props: ['thousands', 'hundreds', 'tens', 'units', 'count', 'countTens', 'countUnit', 'count'],
+    components: {VueTelInput},
+    props: ['thousands', 'hundreds', 'tens', 'units', 'count', 'countTens', 'countUnit', 'count'],
 
     data() {
       return {
         phoneNum: '',
+        value: ''
       }
     },
 

@@ -66,18 +66,16 @@
                   <img src="~@/assets/imgs/story/slide1/icon.jpg" alt="">
                   <div class="item_content-small-info_name">
                     <p>Никита Алексеев</p>
-                    <span></span>
+                    <span>Финансовый аналитик</span>
                   </div>
                 </div>
-                <h3 class="item_content-info_title"></h3>
+                <h3 class="item_content-info_title">О трудностях и барьерах</h3>
                 <p class="item_content-info_text">Все оказалось намного проще чем оно есть.
                   Наверное это потому, что мы привыкли усложнять,
                   а потом жаловаться что все дается с трудом.
                   Все проблемы в нашей голове. Мы много чего упускаем, а потом оправдываемся.
                   Мне выпал шанс, и я им воспользовался. И сегодня я могу позволить себе то,
-                  в чем пару лет назад себе отказывал.
-                  Мое почтение этой компании,
-                  так как вы делаете людей по-настоящему счастливее! </p>
+                  в чем пару лет назад себе отказывал.</p>
                 <p class="item_content-info_time">Время сотрудничества <span>2 года</span></p>
               </div>
               </div>
@@ -549,5 +547,9 @@
 
   .arrow-keyboard_left {
     margin: 69px 113px 70px 26px;
+  }
+
+  .carousel-control {
+    text-shadow: none!important;
   }
 </style>
