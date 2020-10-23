@@ -242,7 +242,7 @@
         <div class="main-registration_form main_form d-flex flex-column" id="form" name="popform">
           <input type="text" placeholder="Ваше Имя">
           <input type="text" placeholder="Ваше email">
-          <vue-tel-input placeholder="+380 (96) 8798 685" v-model="value"></vue-tel-input>
+          <no-ssr placeholder="loading..."><vue-tel-input placeholder="+380 (96) 8798 685" v-model="value"></vue-tel-input></no-ssr>
 
           <a href="/registered" class="btn btn-consult" >Консультация</a>
           <a href="#" class="policy">Я ознакомлен с <span>политикой сайта</span></a>
@@ -773,7 +773,7 @@
 
 <script>
 
-  // import { VueTelInput } from 'vue-tel-input'
+  import { VueTelInput } from 'vue-tel-input'
   import Form from "./Form";
 
   export default {
@@ -784,7 +784,7 @@
       }
     },
     components: {Form,
-      // VueTelInput
+      VueTelInput
     },
     props: ['count'],
     link: [

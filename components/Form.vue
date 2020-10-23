@@ -773,7 +773,7 @@
 
   .form-registration_form-fields .vue-tel-input {
     border: none!important;
-    width: 318px;
+    width: 317px;
     margin-left: -15px;
     box-shadow: none!important;
   }
