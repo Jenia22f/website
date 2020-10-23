@@ -807,11 +807,10 @@
 
 </style>
 <script>
-  // import { VueTelInput } from 'vue-tel-input'
-
+  import { VueTelInput } from 'vue-tel-input'
 
   export default {
-    // components: {VueTelInput},
+    components: { VueTelInput },
     props: ['thousands', 'hundreds', 'tens', 'units', 'count', 'countTens', 'countUnit', 'count'],
 
     data() {
