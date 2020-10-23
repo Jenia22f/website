@@ -794,6 +794,17 @@
     left: 70px;
   }
 
+  .vti__dropdown:hover {
+    background: none!important;
+    border: none!important;
+    outline: none ;
+  }
+
+  .vti__dropdown.open {
+    background-color: transparent!important;
+    outline: none ;
+  }
+
 </style>
 <script>
   import { VueTelInput } from 'vue-tel-input'

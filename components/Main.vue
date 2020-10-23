@@ -1,4 +1,3 @@
-import 'intl-tel-input/build/css/intlTelInput.css';
 
 <template>
   <div class="main">
@@ -312,6 +311,17 @@ import 'intl-tel-input/build/css/intlTelInput.css';
     padding: 0!important;
     top: 7px;
     left: 70px;
+  }
+
+  .vti__dropdown:hover {
+    background: none!important;
+    border: none!important;
+    outline: none ;
+  }
+
+  .vti__dropdown.open {
+    background-color: transparent!important;
+    outline: none ;
   }
 
   .main {
@@ -773,7 +783,9 @@ import 'intl-tel-input/build/css/intlTelInput.css';
         value: ''
       }
     },
-    components: {Form, VueTelInput},
+    components: {Form,
+      VueTelInput
+    },
     props: ['count'],
     link: [
       // {rel: 'stylesheet', href: '~@/css/intlTelInput.scss'},
