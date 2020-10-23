@@ -40,7 +40,7 @@
               <div class="form-registration_form-fields" action="#">
                 <input type="text" placeholder="Ваше имя">
                 <input type="text" placeholder="Ваше email">
-                <vue-tel-input placeholder="+380 (96) 8798 685" v-model="value"></vue-tel-input>
+                <no-ssr placeholder="loading..."> <vue-tel-input placeholder="+380 (96) 8798 685" v-model="value"></vue-tel-input> </no-ssr>
               </div>
               <nuxt-link exact to="/registered">
               <button class="form-registration_form-btn" type="submit">НАЖМИ МЕНЯ</button>
