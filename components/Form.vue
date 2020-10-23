@@ -790,7 +790,7 @@
 
   .form-registration_form-fields .vti__dropdown {
     padding: 0!important;
-    top: -6px;
+    top: -7px;
     left: 70px;
   }
 
