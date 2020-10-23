@@ -773,9 +773,9 @@
 
 <script>
 
-  import { VueTelInput } from 'vue-tel-input'
-
+  // import { VueTelInput } from 'vue-tel-input'
   import Form from "./Form";
+
   export default {
 
     data() {
@@ -784,7 +784,7 @@
       }
     },
     components: {Form,
-      VueTelInput
+      // VueTelInput
     },
     props: ['count'],
     link: [
